@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//TODO ROUTE PER LA HOMEPAGE
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+
+//TODO ROUTE PER I FORM DI ACCESSO E REGISTRATI
+Route::get('/access', [PublicController::class, 'access'])->name('access.form');
