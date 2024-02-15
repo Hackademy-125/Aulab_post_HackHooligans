@@ -11,5 +11,9 @@ public function homepage(){
     return view('welcome');
  }
  
+
+ public function access(){
+    return view('auth.access');
+ }
 }
 
