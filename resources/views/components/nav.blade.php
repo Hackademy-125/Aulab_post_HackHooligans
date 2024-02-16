@@ -24,7 +24,7 @@
 
                     @Auth
                         <li class="nav-item">
-                            <a class="nav-link" href="">Inserisci Articolo</a>
+                            <a class="nav-link" href="{{route('article.create')}}">Inserisci Articolo</a>
                         </li>
                     </ul>
                 <ul class="navbar-nav ">
@@ -35,16 +35,6 @@
                     </form>
                 </ul>
             @endauth
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 </nav>
