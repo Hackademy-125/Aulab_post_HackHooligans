@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except('index', 'show');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -31,28 +34,23 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|unique:articles|min:3',
-            'subtitle' => 'required|min:3',
-            'body' => 'required|min:10',
-            'image' => 'required|image',
-            'category' => 'required,'
-        ]);
+       $request->validate([
+        'title' =>'required|min:3',
+        'subtitle' =>'required|min:3',
+        'body' =>'required|min:5',
+        'image' =>'required|image',
+        'category' =>'required',
+       ]);
 
-        $article = Article::create([
-            'title' => $request->title,
-            'subtitle' => $request->subtitle,
-            'body' => $request->body,
-            'image' => $request->has('image')
-                ?
-                $request->file('image')->store('public/img')
-                :
-                "img/ww.jpg",
-            'category_id' => $request->category,
-            'user_id'=> Auth::user()->id,
-        ]);
-
-        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
+       $article = Article::create([
+        'title' => $request->title,
+        'subtitle' => $request->subtitle,
+        'body' =>  $request->body,
+        'image' => $request->file('image')->store('public/images'),
+        'category' =>$request->category,
+        'user_id' => Auth::user()->id,
+       ]);
+       return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
     }
 
     /**
