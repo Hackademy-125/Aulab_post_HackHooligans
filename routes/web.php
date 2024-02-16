@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccessController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +22,9 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 //TODO ROUTE PER I FORM DI ACCESSO E REGISTRATI
 Route::get('/access', [PublicController::class, 'access'])->name('access.form');
 
-//TODO ROUTE PER I FORM DI ACCESSO E REGISTRATI
+//TODO ROUTE PER LA PAGINA DI CREAZIONE DELL'ARTICOLO
+Route::get('articles/create', [ArticleController::class, 'create'])->name('article.create');
+
+//TODO ROUTE DI TIPO POST PER L'INVIO DEI DATI DEL FORM DELL'ARTICOLO
+Route::post('article/store', [ArticleController::class, 'store'])->name('article.store');
 
