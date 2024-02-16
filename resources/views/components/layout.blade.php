@@ -15,7 +15,7 @@
 <div class="min.vh100">
     {{$slot}}
 </div>
-
+<x-footer></x-footer>
 
 
 </body>
