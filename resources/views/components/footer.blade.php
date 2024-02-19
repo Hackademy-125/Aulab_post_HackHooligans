@@ -13,7 +13,7 @@
         
         <a href="#">Faq</a>
         
-        <a href="#">Contattaci</a>
+        <a href="#">Lavora con noi</a>
       </p>
 
       <p class="footer-company-name">The Aulab Post © 2024</p>
