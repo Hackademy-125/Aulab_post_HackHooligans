@@ -34,11 +34,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+
        $request->validate([
         'title' =>'required|min:3',
         'subtitle' =>'required|min:3',
         'body' =>'required|min:5',
-        'image' =>'required|image',
+        'image' =>'image',
         'category' =>'required',
        ]);
 
@@ -46,15 +47,13 @@ class ArticleController extends Controller
         'title' => $request->title,
         'subtitle' => $request->subtitle,
         'body' =>  $request->body,
-        "image" => $request->image
-        ?
-        $request->file('image')->store('public/images')
-        :
-        "img/OIP.jpg",
+        "image" => $request->image ? $request->file('image')->store('public/images') : "public/images/OIP.jpg",
 
-        'category' =>$request->category,
+        'category_id' =>$request->category,
         'user_id' => Auth::user()->id,
        ]);
+
+
        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
     }
 
