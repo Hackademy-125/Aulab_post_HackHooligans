@@ -4,7 +4,6 @@
 
     <img class="img" src="{{ asset('img/Minimal_initial_brand_logo_1.png') }}" alt="">
 
-<<<<<<< HEAD
       <p class="footer-links">
         <a href="#" class="link-1">Home</a>
         
@@ -16,10 +15,6 @@
         
         <a href="#">Lavora con noi</a>
       </p>
-=======
-    <p class="footer-links">
-      <a href="#" class="link-1">Home</a>
->>>>>>> e008071167740e9275951742905cc2898913c083
 
       <a href="#">Blog</a>
 
@@ -67,7 +62,6 @@
 
   </div>
 
-<<<<<<< HEAD
       <p class="footer-company-about">
         <span>About the company
         </span>
@@ -88,6 +82,3 @@
     </div>
 
   </footer>
-=======
-</footer>
->>>>>>> e008071167740e9275951742905cc2898913c083
