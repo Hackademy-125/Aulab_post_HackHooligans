@@ -1,8 +1,27 @@
-<footer class="footer-distributed top">
+<footer class="footer-distributed">
 
-  <div class="footer-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img class="img-footer" src="storage/app/public/images/logoAulabPost.png" alt="Logo the aulab post">
+                <p class="footer-links">
+                    <a href="#" class="text-dark">Home</a>
+                    <a href="#" class="text-dark">Blog</a>
+                    <a href="#" class="text-dark">About</a>
+                    <a href="#" class="text-dark">Faq</a>
+                    <a href="#" class="text-dark">Contattaci</a>
+                </p>
+                <p class="footer-company-name">The Aulab Post © 2024</p>
+            </div>
 
-    <img class="img" src="{{ asset('img/Minimal_initial_brand_logo_1.png') }}" alt="">
+            <div class="col-12">
+                <div>
+                    <p>Contattati</p>
+                    <p class="text-dark">+800 583 345</p>
+                    <p><a href="mailto:support@theaulabpost.com"
+                            class="text-dark email-footer">support@theaulabpost.com</a></p>
+                </div>
+            </div>
 
       <p class="footer-links">
         <a href="#" class="link-1">Home</a>

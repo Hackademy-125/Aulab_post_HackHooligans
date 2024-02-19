@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{-- ICONE DI FONTAWESOME --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -9,16 +10,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>The Aulab Post</title>
 </head>
-<body>
-    
-<x-nav/>
-<div class="100vh">
-    {{$slot}}
-    
-</div>
 
-<x-footer ></x-footer>
+<body>
+
+    <x-nav />
+    <div class="100vh">
+        {{$slot}}
+
+    </div>
+
+    <x-footer></x-footer>
 
 
 </body>
+
 </html>
