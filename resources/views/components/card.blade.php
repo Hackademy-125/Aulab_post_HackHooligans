@@ -4,7 +4,7 @@
         <h5 class="card-title">{{$title}}</h5>
         
         <h3 class="card-text">{{$subtitle}}</h3>
-        <p class="small text-muted mb-0">{{$category}}</p>
+        <p class="small text-muted mb-0">{{$category}} <i class="{{$icon}}"></i></p>
     </div>
     
     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
