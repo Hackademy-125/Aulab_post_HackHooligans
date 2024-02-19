@@ -15,7 +15,9 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('icon')->nullable()->after('name');
             $table->timestamps();
+           
         });
 
         $categories = [
@@ -24,7 +26,7 @@ return new class extends Migration
             'Politica',
             'Sport',
             'Tech',
-            'Viaggi'
+            'Viaggi',
         ];
 
         foreach ($categories as $category) {
