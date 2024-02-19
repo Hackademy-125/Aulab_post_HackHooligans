@@ -46,7 +46,12 @@ class ArticleController extends Controller
         'title' => $request->title,
         'subtitle' => $request->subtitle,
         'body' =>  $request->body,
-        'image' => $request->file('image')->store('public/images'),
+        "image" => $request->image
+        ?
+        $request->file('image')->store('public/images')
+        :
+        "img/OIP.jpg",
+
         'category' =>$request->category,
         'user_id' => Auth::user()->id,
        ]);

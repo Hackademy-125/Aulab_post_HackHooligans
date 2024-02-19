@@ -1,6 +1,6 @@
 <x-layout>
     <div class="general-container">
-        <div class="container" id="container">
+        <div class="custom-container" id="custom_container">
             {{-- Form di registrazione --}}
             <div class="form-container register">
                 <form action="{{ route('register') }}" method="POST">

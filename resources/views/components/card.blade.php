@@ -1,4 +1,4 @@
-{{-- <div class="card">
+<div class="card">
     <img src='{{Storage::url($image) }}' alt="" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{$title}}</h5>
@@ -9,4 +9,4 @@
         Redatto il {{$data}} da {{$user}}
         <a href="{{$url}}" class="btn btn-info text-white">Leggi</a>
     </div>
-</div> --}}
+</div>
