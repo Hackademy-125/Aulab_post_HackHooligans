@@ -1,13 +1,15 @@
 /* FOOTER  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
-.img {
+.img-footer {
+height: 150px;
 width: 150px;
+
 }
 
 
 .footer-distributed{
-  background: #b6aeae;
+  background: #dcdad3;
   bottom: 0;
   width: 100%;
   margin-top: 200px; 
@@ -34,10 +36,6 @@ width: 150px;
   color:  #ffffff;
   font: normal 36px 'Open Sans', cursive;
   margin: 0;
-}
-
-.footer-distributed h3 span{
-  color:  lightseagreen;
 }
 
 /* Footer links */
@@ -70,7 +68,6 @@ width: 150px;
 }
 
 .footer-distributed .footer-center i{
-  background-color:  #33383b;
   color: #ffffff;
   font-size: 25px;
   width: 38px;
@@ -137,10 +134,9 @@ width: 150px;
 
 .footer-distributed .footer-company-about span{
   display: block;
-  color:  #ffffff;
+  color:  #000000;
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .footer-distributed .footer-icons{
@@ -161,4 +157,8 @@ width: 150px;
   line-height: 35px;
   margin-right: 3px;
   margin-bottom: 5px;
+}
+
+.email-footer:hover{
+    border-bottom: 1px solid black;
 }

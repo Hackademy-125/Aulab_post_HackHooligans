@@ -1,56 +1,43 @@
-<footer class="footer-distributed top">
+<footer class="footer-distributed">
 
-  <div class="footer-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img class="img-footer" src="storage/app/public/images/logoAulabPost.png" alt="Logo the aulab post">
+                <p class="footer-links">
+                    <a href="#" class="text-dark">Home</a>
+                    <a href="#" class="text-dark">Blog</a>
+                    <a href="#" class="text-dark">About</a>
+                    <a href="#" class="text-dark">Faq</a>
+                    <a href="#" class="text-dark">Contattaci</a>
+                </p>
+                <p class="footer-company-name">The Aulab Post © 2024</p>
+            </div>
 
-    <img class="img" src="{{ asset('img/Minimal_initial_brand_logo_1.png') }}" alt="">
+            <div class="col-12">
+                <div>
+                    <p>Contattati</p>
+                    <p class="text-dark">+800 583 345</p>
+                    <p><a href="mailto:support@theaulabpost.com"
+                            class="text-dark email-footer">support@theaulabpost.com</a></p>
+                </div>
+            </div>
 
-    <p class="footer-links">
-      <a href="#" class="link-1">Home</a>
-
-      <a href="#">Blog</a>
-
-      <a href="#">About</a>
-
-      <a href="#">Faq</a>
-
-      <a href="#">Contattaci</a>
-    </p>
-
-    <p class="footer-company-name">The Aulab Post © 2024</p>
-  </div>
-
-  <div class="footer-center">
-
-    <p class="footer-company-about">
-      <span>Contattaci</span>
-    <div>
-      <i class="fa fa-phone"></i>
-      <p>+800 583 345</p>
+            <div class="col-12">
+                <p class="">
+                    <span>The Aulab Post</span>
+                    "Esplora il mondo attraverso l'insaziabile sete di conoscenza. La cultura è la chiave che apre le
+                    porte
+                    della comprensione, la cultura è The Aulab Post."
+                </p>
+                <div class="footer-icons">
+                    <p>Seguici su:</p>
+                    <a href="#"><i class="fa fa-facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p><a href="mailto:support@theaulabpost.com">support@theaulabpost.com</a></p>
-    </div>
-
-  </div>
-
-  <div class="footer-right">
-
-    <p class="footer-company-about text-dark">
-      <span>About the company</span>
-      Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-    </p>
-
-    <div class="footer-icons">
-
-      <a href="#"><i class="fa fa-facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"><i class="bi bi-whatsapp"></i></a>
-      <a href="#"><i class="fa fa-linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"><i class="bi bi-instagram"></i></a>
-
-    </div>
-
-  </div>
-
 </footer>
