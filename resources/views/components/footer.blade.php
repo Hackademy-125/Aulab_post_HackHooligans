@@ -28,7 +28,7 @@
                     "Esplora il mondo attraverso l'insaziabile sete di conoscenza. La cultura è la chiave che apre le
                     porte
                     della comprensione, la cultura è The Aulab Post."
-                </p>
+                  </p>
 
                 <div class="footer-icons">
                     <p>Seguici su:</p>

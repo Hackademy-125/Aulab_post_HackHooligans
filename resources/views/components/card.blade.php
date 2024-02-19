@@ -1,12 +1,15 @@
 <div class="card">
-    <img src="{{$image}}" alt="" class="card-img-top">
+    <img src="{{ $image }}" alt="" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{$title}}</h5>
+        
         <h3 class="card-text">{{$subtitle}}</h3>
-        <a href="{{ $urlCategory }}" class="small text-muted d-flex justify-content-center align-items-center">{{$category}}</a>
+        <p class="small text-muted mb-0">{{$category}} <i class="{{$icon}}"></i></p>
     </div>
-    <div class="card-footer text-muted d-flex justify-content-center align-items-center">
-        Redatto il {{$data}} da <a href="{{$urlUser}}">{{$user}}</a>
-        <a href="{{$url}}" class="btn btn-info text-white">Leggi</a>
+    
+    <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+        <p class="m-0">Redatto il {{$data}} da  {{$user}}</p>
+        <a href="{{$url}}" class="btn btn-info text-white" id="leggi-btn">Leggi</a>
     </div>
 </div>
+
