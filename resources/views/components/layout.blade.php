@@ -12,7 +12,7 @@
 <body>
     
 <x-nav/>
-<div class="">
+<div class="100vh">
     {{$slot}}
     
 </div>

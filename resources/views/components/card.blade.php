@@ -1,5 +1,5 @@
 <div class="card">
-    <img src='{{Storage::url($image) }}' alt="" class="card-img-top">
+    <img src="{{$image}}" alt="" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{$title}}</h5>
         <h3 class="card-text">{{$subtitle}}</h3>
