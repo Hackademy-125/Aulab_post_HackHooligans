@@ -2,15 +2,11 @@
 
     <div class="container-fluid p-5 bg-info text-center text-white">
         <div class="row">
-            <h1>The Aulab Post</h1>
+            <h1>Tutti gli articoli</h1>
         </div>
     </div>
 
-    @if (session('message'))
-        <div class="alert alert-danger text-center">
-            {{ session('message') }}
-        </div>
-    @endif
+
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -28,6 +24,8 @@
                     urlCategory="{{ route('article.byCategory', ['category' => $article->category->id ?? 'categoria non trovata']) }}"
                     urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
 
+
+                    
                     />
 
                 </div>
