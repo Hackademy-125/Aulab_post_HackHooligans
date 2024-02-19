@@ -12,10 +12,12 @@
 <body>
     
 <x-nav/>
-<div class="min.vh100">
+<div class="">
     {{$slot}}
+    
 </div>
-<x-footer></x-footer>
+
+<x-footer ></x-footer>
 
 
 </body>

@@ -1,4 +1,4 @@
-<footer class="footer-distributed">
+<footer class="footer-distributed top">
 
     <div class="footer-left">
 
