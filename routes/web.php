@@ -39,3 +39,4 @@ Route::get('/article/category/{category}', [ArticleController::class, 'byCategor
 
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UN USER SPECIFICO
 Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
+

@@ -17,12 +17,8 @@ width: 150px;
 
 }
 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-  display: inline-block;
-  vertical-align: top;
-}
+
+
 
 /* Footer left */
 
@@ -30,21 +26,11 @@ width: 150px;
   width: 40%;
 }
 
-/* The company logo */
 
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Open Sans', cursive;
-  margin: 0;
-}
 
 /* Footer links */
 
-.footer-distributed .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
+
 
 .footer-distributed .footer-links a{
   display:inline-block;
@@ -90,18 +76,6 @@ width: 150px;
   font-weight:400;
   vertical-align: middle;
   margin:0;
-}
-
-.footer-distributed .footer-center p span{
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-  color:  lightseagreen;
-  text-decoration: none;;
 }
 
 .footer-distributed .footer-links a:before {
@@ -159,6 +133,3 @@ width: 150px;
   margin-bottom: 5px;
 }
 
-.email-footer:hover{
-    border-bottom: 1px solid black;
-}
