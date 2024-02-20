@@ -12,26 +12,28 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
                 </li>
                 @guest
-              </ul>
-                    <ul class="navbar-nav ">
-                        <li class="nav-item fs-custom-nav">
-                            <a class="nav-link" href="{{ route('access.form') }}"> Registrati / Accedi</a>
-                          </li>
-                    @endguest
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item fs-custom-nav">
+                        <a class="nav-link" href="{{ route('access.form') }}"> Registrati / Accedi</a>
+                    </li>
+                @endguest
 
-                    @Auth
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('article.create')}}">Inserisci Articolo</a>
-                        </li>
-                    </ul>
+                @Auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('article.create') }}">Inserisci Articolo</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ">
                     <a class="nav-link" href="">Benvenuto: {{ Auth::user()->name }}</a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button class="btn btn-danger">Logout</button>
+                        <div class="custom-btn">
+                            <button class="button btn1">Logout</button>
+                        </div>
                     </form>
                 </ul>
             @endauth

@@ -3,6 +3,10 @@
     font-size: 18px;
 }
 
+.bg-custom{
+    background-color: #17a2b8;
+}
+
 /* pagina di accesso e registrazione */
 *{
     margin: 0;
