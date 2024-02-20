@@ -67,6 +67,13 @@
 .btn1:hover::before{
     height: 180%;
 }
+/* messaggi di errore */
+.custom-error{
+    font-size: 10px;
+    text-align: start;
+    /* background-color: red; */
+    padding: 0px 15px;
+}
 
 
 

@@ -25,8 +25,6 @@
                     urlCategory="{{ route('article.byCategory', ['category' => $article->category->id ?? 'categoria non trovata']) }}"
                     urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
 
-
-
                     />
 
                 </div>
