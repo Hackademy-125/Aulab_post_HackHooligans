@@ -18,6 +18,7 @@
                     subtitle="{{ $article->subtitle }}"
                     image="{{ Storage::url($article->image) }}"
                     category="{{ $article->category->name ?? 'non categorizzato' }}"
+                    icon="{{$article->category->icon}}"
                     data="{{ $article->created_at->format('d/m/y') }}" 
                     user="{{ $article->user->name }}"
                     url="{{ route('article.show', compact('article')) }}"
