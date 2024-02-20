@@ -7,6 +7,6 @@
     </div>
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">
         Redatto il {{$data}} da <a href="{{$urlUser}}">{{$user}}</a>
-        <a href="{{$url}}" class="btn btn-info text-white">Leggi</a>
+        <a href="{{$url}}" class="button btn1">Leggi</a>
     </div>
 </div>
