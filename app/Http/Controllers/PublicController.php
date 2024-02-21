@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Mail\CareerRequestMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -44,7 +45,7 @@ class PublicController extends Controller
       $email = $request->email;
       $message = $request->message;
 
-      Mail::to('admin@theaulabpost.it')->send(new \App\Mail\CareerRequestMail(compact('role', 'email', 'message')));
+      Mail::to('admin@theaulabpost.it')->send( new CareerRequestMail(compact('role', 'email', 'message')));
 
       switch ($role) {
          case 'admin':

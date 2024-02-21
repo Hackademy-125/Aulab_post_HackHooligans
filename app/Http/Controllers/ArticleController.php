@@ -37,9 +37,7 @@ class ArticleController extends Controller
         $articles = $category->articles()->orderby('created_at' , 'desc')->get();
         return view('article.by-category' , compact('category' , 'articles'));
     }
-
-
-
+    
 
     /**
      *!Pagina di creazione articolo 
@@ -109,3 +107,4 @@ class ArticleController extends Controller
         //
     }
 }
+

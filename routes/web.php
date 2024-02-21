@@ -37,6 +37,7 @@ Route::get('/article/show/{article}' , [ArticleController::class, 'show'])->name
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UNA CATEGORIA SPECIFICA
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
+
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UN USER SPECIFICO
 Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
 

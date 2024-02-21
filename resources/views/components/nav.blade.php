@@ -14,6 +14,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li>
+                                <a href="{{ route('article.byCategory', compact('category')) }}">{{$category->name}}</a>
+                            </li>
+                        @endforeach
+
+                    </ul>
+                </li>
                 @guest
                 </ul>
                 <ul class="navbar-nav ">
