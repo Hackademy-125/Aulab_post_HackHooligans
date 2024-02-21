@@ -28,6 +28,9 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('careers') }}">Lavora con noi</a>
+                </li>
                 @guest
                 </ul>
                 <ul class="navbar-nav ">

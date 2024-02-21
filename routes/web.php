@@ -43,6 +43,9 @@ Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 // TODO ROUTE PER INVIO CANDIDATURA
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
+//TODO ROUTE PER LA CREAZIONE DI ABOUT US
+Route::get('/about-us', [PublicController::class, 'aboutUs'])->name('aboutUs');
+
 //TODO ROUTE PER GRUPPO DI GESTIONE RUOLI 
 Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
