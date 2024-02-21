@@ -29,7 +29,7 @@
 
                 <div class="footer-icons">
                     <h6>Seguici su:</h6>
-                    <a href="{{ url('https://www.facebook.com/aulab') }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="{{ url('https://www.facebook.com/aulab') }}" target="_blank"><i class=" bi-facebook"></i></a>
                     <a href="{{ url('https://api.whatsapp.com/send/?phone=393339513967&text=Ciao%21+Vorrei+avere+maggiori+informazioni+sul+corso+Hackademy+per+diventare+web+developer&type=phone_number&app_absent=0') }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     <a href="{{ url('https://www.linkedin.com/school/aulab-srl/') }}" target="_blank"><i class="bi bi-linkedin"></i></a>
                     <a href="{{ url('https://www.instagram.com/aulab_it/') }}" target="_blank"><i class="bi bi-instagram"></i></a>
