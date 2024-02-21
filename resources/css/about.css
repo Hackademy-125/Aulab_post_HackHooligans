@@ -1,4 +1,4 @@
-header {
+.about{
     height: 100vh;
     background-image: linear-gradient(rgba(12, 12, 12, 0.59), rgba(10, 10, 10, 0.064)),  url(/public/image/pexels-pixabay-262367.jpg);
     background-size: cover;
@@ -6,4 +6,13 @@ header {
   }  
   .txt-about{
     color: white;
+  }
+  .about-height{
+    height: 55vh;
+  }
+  a{
+    text-decoration: none;
+  }
+  .about-text{
+    font-size: 30px;
   }
