@@ -37,6 +37,13 @@ Route::get('/article/show/{article}' , [ArticleController::class, 'show'])->name
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UNA CATEGORIA SPECIFICA
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
+
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UN USER SPECIFICO
 Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
+
+// TODO ROUTE PER IL RUOLO
+Route::get('/careers' , [PublicController::class, 'careers'])->name('careers');
+
+// TODO ROUTE PER INVIO CANDIDATURA
+Route::post('/careers/submit', [PublicController::class,'careersSubmit'])->name('careers.submit');
 
