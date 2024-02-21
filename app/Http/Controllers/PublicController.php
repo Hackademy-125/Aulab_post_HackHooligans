@@ -17,7 +17,7 @@ class PublicController extends Controller
 
    public function homepage()
    {
-      $articles = Article::orderBy('created_at', 'desc')->take(4)->get();
+      $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
       return view('welcome', compact('articles'));
    }
 
@@ -30,6 +30,10 @@ class PublicController extends Controller
    public function careers()
    {
       return view('careers');
+   }
+
+   public function aboutUs(){
+      return view('about');
    }
 
    public function careersSubmit(Request $request)

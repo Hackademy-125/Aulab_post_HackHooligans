@@ -11,7 +11,7 @@
 
 @media screen and (min-width:750px) {
   .nav-custom {
-    margin: 5vh 10vw;
+    margin: 5vh 3vw;
     border: 1px solid black ;
     border-radius: 8px;
     backdrop-filter:blur(10px) ;
@@ -22,7 +22,7 @@
 }
 
 .img-navbar {
-    max-width: 100px;
+    max-width: 60px;
     height: auto; 
     display: block; 
     margin-top: 0; 

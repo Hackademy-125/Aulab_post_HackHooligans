@@ -7,7 +7,7 @@
                 <p class="footer-links">
                     <a href="{{ route('homepage') }}" class="text-dark">Home</a>
                     <a href="#" class="text-dark">Blog</a>
-                    <a href="#" class="text-dark">About</a>
+                    <a href="{{route('aboutUs')}}" class="text-dark">About</a>
                     <a href="#" class="text-dark">Faq</a>
                 </p>
                 <p class="footer-company-name">The Aulab Post © 2024</p>
