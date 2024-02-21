@@ -22,10 +22,10 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
-                                <a href="{{ route('article.byCategory', compact('category')) }}">{{$category->name}}</a>
+                                <a
+                                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
-
                     </ul>
                 </li>
                 @guest
@@ -42,6 +42,13 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ">
+
+                    @if(Auth::user()->is_admin)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
+                    </li>
+                    @endif
+                    
                     <a class="nav-link" href="">Benvenuto: {{ Auth::user()->name }}</a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
