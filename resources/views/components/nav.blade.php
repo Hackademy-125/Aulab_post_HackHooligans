@@ -48,6 +48,12 @@
                         <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
                     </li>
                     @endif
+
+                    @if(Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard Revisore</a>
+                    </li>
+                    @endif
                     
                     <a class="nav-link" href="">Benvenuto: {{ Auth::user()->name }}</a>
                     <form action="{{ route('logout') }}" method="POST">
