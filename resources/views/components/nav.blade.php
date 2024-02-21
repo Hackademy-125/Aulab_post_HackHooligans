@@ -26,6 +26,7 @@
                         @endforeach
                     </ul>
 
+                
                 </li>
                 @guest
                     <li class="nav-item">
