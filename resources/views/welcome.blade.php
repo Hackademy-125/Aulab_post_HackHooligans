@@ -1,8 +1,8 @@
 <x-layout>
 
-    <div class="container-fluid p-5  text-center text-white bg-custom">
+    <div class="container-fluid p-5 text-center text-white bg-custom " >
         <div class="row">
-            <h1>The Aulab Post</h1>
+            <h1 style="">The Aulab Post </h1>
         </div>
     </div>
     @if (session('message'))

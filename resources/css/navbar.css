@@ -1,0 +1,23 @@
+
+.nav-custom{
+       backdrop-filter:blur(10px) ;
+    background-color: rgba(221, 234, 234, 0.066);
+    
+}
+
+.transition{
+    transition: 500ms;
+}
+
+@media screen and (min-width:750px) {
+  .nav-custom {
+    margin: 5vh 10vw;
+    border: 1px solid black ;
+    border-radius: 8px;
+    backdrop-filter:blur(10px) ;
+    background-color: rgba(221, 234, 234, 0.066);
+    z-index: 1000;
+   
+  }  
+}
+
