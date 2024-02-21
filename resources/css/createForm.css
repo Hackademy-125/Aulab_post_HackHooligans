@@ -34,21 +34,22 @@
     align-items: center;
 }
 .button{
-    background-color: white;
-    color: black;
+    
+    background-color: white!important;
+    color: black !important;
     padding: 15px 50px;
-    border: 2px solid rgb(20, 11, 11, 0.251);
-    border-radius: 15px;
-    transition: 1.2s;
-    position: relative;
-    overflow: hidden;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+    border-radius: 15px!important;
+    transition: 1.2s!important;
+    position: relative!important;
+    overflow: hidden!important;
 }
 .btn1{
-    color: black;
+    color: black!important;
 }
 .btn1:hover{
-    background-color: black;
-    color: white;
+    background-color: black!important;
+    color: white!important;
 }
 .button::before{
     content: "";
