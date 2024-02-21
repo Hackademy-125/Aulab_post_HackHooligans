@@ -1,6 +1,6 @@
 <nav class="navbar  navbar-expand-lg fixed-top transition ">
     <div class="container-fluid fs-5">
-        <a class="navbar-brand" hrefo="{{ route('homepage') }}">The Aulab Post</a>
+        <a href="{{ route('homepage') }}" ><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png" alt="Logo the aulab post"></a>
         {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Categorie
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
@@ -32,7 +32,7 @@
                 </ul>
                 <ul class="navbar-nav ">
                     <li class="nav-item fs-custom-nav">
-                        <a class="nav-link p-0" href="{{ route('access.form') }}"> Registrati / Accedi</a>
+                        <a class="nav-link p-0 custom-link" href="{{ route('access.form') }}">Registrati / Accedi</a>
                     </li>
                 @endguest
 
@@ -42,11 +42,13 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ">
-                    <a class="nav-link " href="">Benvenuto: {{ Auth::user()->name }}</a>
+                    <a class="nav-link " href=""><i class="bi bi-person fs-3"></i>
+ 
+                        {{ Auth::user()->name }}</a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <div class="custom-btn">
-                            <button class="button btn1">Logout</button>
+                        <div class="custom-btn mt-0">
+                            <button class="buttonnav btn1">Logout</button>
                         </div>
                     </form>
                 </ul>
