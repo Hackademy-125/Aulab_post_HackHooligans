@@ -2,10 +2,6 @@
     <div class="container-fluid fs-5">
         <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png"
                 alt="Logo the aulab post"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
