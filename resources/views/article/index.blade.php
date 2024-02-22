@@ -1,35 +1,41 @@
 <x-layout>
-<header>
-<div class="container-fluid ">
-    <div class="row">
-        <div class="col-12 p-0">
-            <!-- Carosello header -->
-            <div class="position-relative mt-3">
-                <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/moda.jpg') }}" class="d-block w-100" alt="Moda">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <!-- Carosello header -->
+                <div class="position-relative mt-3">
+                    <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-pause="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="3000">
+                                <img src="{{ asset('/image/moda.jpg') }}" class="d-block w-100" alt="Moda">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{{ asset('/image/auto2.jpg') }}" class="d-block w-100" alt="Auto">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{{ asset('/image/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{{ asset('image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{{ asset('/image/tecnologia.jpg') }}" class="d-block w-100" alt="Tecnologia">
+                            </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/auto2.jpg') }}" class="d-block w-100" alt="Auto">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/politica.jpg') }}" class="d-block w-100" alt="Politica">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/tecnologia.jpg') }}" class="d-block w-100" alt="Tecnologia">
+
+                    </div>
+
+                    <div class="container-fluid p-5 text-center text-white bg-custom ">
+                        <div class="row">
+                            <h1 class="">The Aulab Post </h1>
                         </div>
                     </div>
+
                 </div>
-                <h1 class="titles title-custom text-s mt-3">THE AULAB POST</h1>
             </div>
         </div>
-    </div>
-</div>
-</header>
+    </header>
 
 
 

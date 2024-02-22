@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <header class="container-fluid" id="header">
         <div class="row">
             <div class="col-12 p-0">
                 <!-- Carosello header -->
@@ -26,16 +26,16 @@
 
                     </div>
 
-                    <div class="container-fluid p-5 text-center text-white bg-custom ">
-                        <div class="row">
-                            <h1 class="">The Aulab Post </h1>
-                        </div>
-                    </div>
+                 
+                        
+                            <h1 class="position-absolute top-50 left-50 text-white z-10">The Aulab Post </h1>
+                   
                     
+
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     @if (session('message'))
         <div class="alert alert-danger text-center">
@@ -43,7 +43,7 @@
         </div>
     @endif
 
-    <div class="container my-5">
+    <article class="container my-5" id="article_cards">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 ">
@@ -51,8 +51,10 @@
                     <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}"
                         image="{{ Storage::url($article->image) }}"
                         category="{{ $article->category->name ?? 'non categorizzato' }}"
-                        icon="{{ $article->category->icon }}" data="{{ $article->created_at->format('d/m/y') }}"
-                        user="{{ $article->user->name }}" url="{{ route('article.show', compact('article')) }}"
+                        icon="{{ $article->category->icon }}" 
+                        data="{{ $article->created_at->format('m/d') }}"
+                        user="{{ $article->user->name }}" 
+                        url="{{ route('article.show', compact('article')) }}"
                         urlCategory="{{ route('article.byCategory', ['category' => $article->category->id ?? 'categoria non trovata']) }}"
                         urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" 
                         />
@@ -60,7 +62,7 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </article>
 
 
 
