@@ -51,6 +51,7 @@
     font-size: 1rem;
     color: #6e6a6a;
     margin-bottom: 0.5rem;
+    text-decoration: none !important;
   }
   
   .card-footer {
@@ -86,7 +87,6 @@
   .redazione a:hover {
       color: red; 
   }
-  
   
   
   

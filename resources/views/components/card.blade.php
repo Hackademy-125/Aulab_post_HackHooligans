@@ -9,7 +9,7 @@
             <a href="{{ $urlCategory }}">
                 <p class="small text-muted mb-0">{{ $category }}</p>
             </a>
-            <a href="{{$urlCategory}}"><i class="{{$icon}}"></i></a>
+            <a href="{{$urlCategory}}" class="text-dark "><i class=" {{$icon}}"></i></a>
         </div>
 
     </div>
