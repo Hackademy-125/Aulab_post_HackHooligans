@@ -1,0 +1,24 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "public/image/pexels-pixabay-262367.jpg": {
+    "file": "assets/pexels-pixabay-262367-DO2eI4on.jpg",
+    "src": "public/image/pexels-pixabay-262367.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-YgCz-gkz.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CUqD2rMp.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
