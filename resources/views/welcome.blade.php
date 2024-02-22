@@ -1,27 +1,4 @@
 <x-layout>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 p-0">
-            <!-- Carosello header -->
-            <div class="position-relative mt-3">
-                <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/moda.jpg') }}" class="d-block w-100" alt="Moda">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/auto2.jpg') }}" class="d-block w-100" alt="Auto">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/politica.jpg') }}" class="d-block w-100" alt="Politica">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <img src="{{ asset('/storage/images/tecnologia.jpg') }}" class="d-block w-100" alt="Tecnologia">
-                        </div>
-                    </div>
 
     <div class="container-fluid p-5 text-center text-white bg-custom " >
         <div class="row">
@@ -51,10 +28,11 @@
                     urlCategory="{{ route('article.byCategory', ['category' => $article->category->id ?? 'categoria non trovata']) }}"
                     urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
 
-                    /> </div>
-            </div>
+                    />
+
+                </div>
+            @endforeach
+        </div>
     </div>
-
-
 
 </x-layout>
