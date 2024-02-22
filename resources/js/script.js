@@ -9,3 +9,5 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     custom_container.classList.remove('active');
 });
+
+
