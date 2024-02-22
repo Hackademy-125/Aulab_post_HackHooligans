@@ -31,4 +31,8 @@ loginBtn?.addEventListener('click', () => {
     custom_container.classList.remove('active');
 });
 
+<<<<<<< HEAD
+
+=======
 //FINE FORM DI REGISTRAZIONE/ACCEDI 
+>>>>>>> 6a051765296f0d9ca53f7653e1504eaa11bd0b91
