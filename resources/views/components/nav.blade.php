@@ -35,7 +35,7 @@
                 </ul>
                 <ul class="navbar-nav ">
                     <li class="nav-item fs-custom-nav">
-                        <a class="nav-link p-0 custom-link" href="{{ route('access.form') }}">Registrati / Accedi</a>
+                        <a class="nav-link p-0 custom-link" href="{{ route('access.form') }}">Registrati/Accedi</a>
                     </li>
                 @endguest
 
