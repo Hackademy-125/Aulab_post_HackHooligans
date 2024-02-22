@@ -12,7 +12,7 @@ class PublicController extends Controller
 {
    public function __construct()
    {
-      $this->middleware('auth')->except(['homepage', 'access',]);
+      $this->middleware('auth')->except(['homepage', 'access', 'aboutUs']);
    }
 
    public function homepage()
