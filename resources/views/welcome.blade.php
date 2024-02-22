@@ -26,7 +26,7 @@
 
                     </div>
 
-                    <div class="container-fluid p-5 text-center text-white bg-custom ">
+                    <div class="container-fluid p-5 text-center text-white bg-p my-3 ">
                         <div class="row">
                             <h1 class="">The Aulab Post </h1>
                         </div>
@@ -44,9 +44,9 @@
     @endif
 
     <div class="container my-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-evenly">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-3 ">
+                <div class="col-12 col-md-7 col-lg-4 my-3">
                     {{-- Card fatta con componente --}}
                     <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}"
                         image="{{ Storage::url($article->image) }}"

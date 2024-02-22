@@ -2,9 +2,13 @@
     <div class="container-fluid fs-5">
         <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png"
                 alt="Logo the aulab post"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="collapse navbar-collapse   d-flex justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav  d-flex justify-content-center w-100  mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active " aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
@@ -21,15 +25,16 @@
                         @foreach ($categories as $category)
                             <li>
 
-                                <a class="buttondrop btndrop" href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
+                                <a class="buttondrop btndrop"
+                                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
                     </ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('careers') }}">Lavora con noi</a>
-                    </li>
-                
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('careers') }}">Lavora con noi</a>
+                </li>
+
                 </li>
                 @guest
                 </ul>
@@ -53,16 +58,19 @@
                             <i class="bi bi-person fs-4"></i> {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item buttondrop btndrop" href="{{ route('article.create') }}">Inserisci Articolo</a>
+                            <li><a class="dropdown-item buttondrop btndrop" href="{{ route('article.create') }}">Inserisci
+                                    Articolo</a>
                             </li>
 
                             @if (Auth::user()->is_admin)
-                                <li><a class="dropdown-item buttondrop btndrop" href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
+                                <li><a class="dropdown-item buttondrop btndrop"
+                                        href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
                                 </li>
                             @endif
 
                             @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item buttondrop btndrop" href="{{ route('revisor.dashboard') }}">Dashboard
+                                <li><a class="dropdown-item buttondrop btndrop"
+                                        href="{{ route('revisor.dashboard') }}">Dashboard
                                         Revisore</a></li>
                             @endif
 
