@@ -1,7 +1,7 @@
 
 .nav-custom{
        backdrop-filter:blur(10px) ;
-    background-color: #dcdad3;
+    /* background-color: #08415cad; */
     
 }
 
@@ -15,7 +15,7 @@
     border: 1px solid black ;
     border-radius: 8px;
     backdrop-filter:blur(10px) ;
-    background-color:#dcdad3a2;
+    /* background-color:#08415cad; */
     z-index: 1000;
    position: sticky;
    top: 10px;
@@ -55,11 +55,11 @@
     transition: background-color 0.3s; 
 }
 
-.dropdown-menu li a:hover {
-    background-color: #f4f4f4; 
-}
+
 
 .custom-link {
+    color: black;     color: black; 
+
     text-decoration: none; 
     transition: color 0.3s; 
 }
@@ -83,7 +83,7 @@
     color: black!important;
 }
 .btndrop:hover{
-    background-color: black!important;
+    background-color: #08415cad!important;
     color: white!important;
 }
 .buttondrop::before{
