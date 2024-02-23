@@ -1,9 +1,9 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5  text-center text-index ">
         <div class="row">
-            <h1>
-                Titolo: <span class="font-title">{{ $article->title }}</span>
+            <h1 class="display-2">
+                 <span class="font-title">{{ $article->title }}</span>
             </h1>
         </div>
     </div>

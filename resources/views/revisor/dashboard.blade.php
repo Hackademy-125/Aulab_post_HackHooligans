@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid p-5  text-center text-dark bg-p ">
+    <div class="container-fluid p-5  text-center text-index  ">
         <div class="row">
-            <h1>Bentornato Revisore</h1>
+            <h1 class="display-3">Bentornato Revisore</h1>
         </div>
     </div>
 

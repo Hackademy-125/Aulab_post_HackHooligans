@@ -1,39 +1,10 @@
 <x-layout>
-    <header>
-        <div class="container-fluid">
+    <header class="text-index">
+        <div class="container-fluid p-5 text-center">
             <div class="row">
-                <div class="col-12 p-0">
-                    <!-- Carosello header -->
-                    <div class="position-relative mt-3">
-                        <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                            data-bs-pause="false">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="3000">
-                                    <img src="{{ asset('/image/moda.jpg') }}" class="d-block w-100" alt="Moda">
-                                </div>
-                                <div class="carousel-item" data-bs-interval="3000">
-                                    <img src="{{ asset('/image/auto2.jpg') }}" class="d-block w-100" alt="Auto">
-                                </div>
-                                <div class="carousel-item" data-bs-interval="3000">
-                                    <img src="{{ asset('/image/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
-                                </div>
-                                <div class="carousel-item" data-bs-interval="3000">
-                                    <img src="{{ asset('image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
-                                </div>
-                                <div class="carousel-item" data-bs-interval="3000">
-                                    <img src="{{ asset('/image/tecnologia.jpg') }}" class="d-block w-100"
-                                        alt="Tecnologia">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container-fluid p-5 text-center text-white bg-p my-5 ">
-                            <div class="row">
-                                <h1 class="">The Aulab Post </h1>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <h1 class="display-1 ">
+                    I nostri articoli
+                </h1>
             </div>
         </div>
     </header>

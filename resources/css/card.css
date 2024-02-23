@@ -1,9 +1,5 @@
 /* CARDS  */
-:root {
-  --c-primary: black;
-  --c-secondary: #DAD6D6;
-  --c-accent: #222;
-}
+
 
 .card {
   border: 1px solid #ccc;
@@ -65,23 +61,23 @@
 /* Bottone e Footer della card  */
 
 .button1 {
-  background-color: white;
-  color: black;
+  background-color: var(--c-tertiary);
+  color: var(--c-primary);
   padding: 8px 20px;
   border: 2px solid rgba(20, 11, 11, 0.251);
   border-radius: 15px;
-  transition: 1.2s;
+  transition: 0.4s;
   display: inline-block;
   text-decoration: none;
 }
 
 .button1:hover {
-  background-color: #08415cad;
+  background-color: var(--c-primary);
   color: white;
 }
 
 .redazione a {
-  color: #08415cad;
+  color: var(--c-primary);
   font-weight: 600;
   /* color: inherit;  */
   text-decoration: none;
@@ -89,7 +85,7 @@
 }
 
 .redazione a:hover {
-  color: black;
+  color: var(--c-secondary);
 }
 
 .pad-0 {
@@ -97,13 +93,13 @@
 }
 
 .custom-line {
-  border-bottom: 3px solid #08415cad;
+  border-bottom: 3px solid var(--c-primary);
   margin-left: 85px;
   margin-right: 85px;
 }
 
 .card i {
-  color: #08415cad;
+  color: var(--c-primary);
 }
 
 .card p {
