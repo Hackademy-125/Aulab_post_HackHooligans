@@ -1,6 +1,6 @@
 <nav class="navbar nav-custom navbar-expand-lg  transition ">
     <div class="container-fluid fs-5">
-        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png"
+        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png" id="nav_logo"
                 alt="Logo the aulab post"></a>
 
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
@@ -36,7 +36,7 @@
                 </ul>
                 <ul class="navbar-nav ">
                     <li class="nav-item fs-custom-nav">
-                        <a class="nav-link p-0 custom-link" href="{{ route('access.form') }}">Registrati/Accedi</a>
+                        <a class="nav-link p-0 custom-link  " href="{{ route('access.form') }}">Registrati/Accedi</a>
                     </li>
                 @endguest
 
@@ -47,11 +47,11 @@
 
 
                 </ul>
-                <ul class="p-0">
+                <ul class="p-0 ">
                     <li class="nav-item me-5 dropdown d-flex justify-content-end mt-1">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person fs-4"></i> {{ Auth::user()->name }}
+                            <i class="bi bi-person  fs-4"></i>{{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item buttondrop btndrop" href="{{ route('article.create') }}">Inserisci
@@ -82,3 +82,5 @@
         </div>
     </div>
 </nav>
+
+
