@@ -1,7 +1,7 @@
 /* Bottone invia la tua candidatura  */
 .button-application{ 
     background-color: var(--c-tertiary)!important;
-    color: black !important;
+    color: var(--c-secondary)!important;
     padding: 10px;
     border: 2px solid rgb(20, 11, 11, 0.251) ;
     border-radius: 15px!important;
@@ -11,8 +11,8 @@
 }
 
 .button-application:hover{
-    background-color: #08415cad!important;
-    color: white!important;
+    background-color: var(--c-primary)!important;
+    color: var(--c-tertiary)!important;
 }
 
 /* Sezione descrizione candidatura */
@@ -29,7 +29,7 @@
     height: 350px;
     /* border: 2px solid darkred; */
     border-radius: 56% 44% 33% 57% / 34% 48% 41% 38%;
-    box-shadow: 6px 6px 20px 5px  #08415cad;
+    box-shadow: 6px 6px 20px 5px  var(--c-primary);
   }
   .work-img-2 {
     background-image: url(/public/image/revisore.jpg);
@@ -39,7 +39,7 @@
     height: 350px;
     /* border: 2px solid darkred; */
     border-radius: 56% 44% 33% 57% / 34% 48% 41% 38%;
-    box-shadow: 6px 6px 20px 5px  #08415cad;
+    box-shadow: 6px 6px 20px 5px  var(--c-primary);
   }
   .work-img-3 {
     background-image: url(/public/image/redattore.jpg);
@@ -49,7 +49,7 @@
     height: 350px;
     /* border: 2px solid darkred; */
     border-radius: 56% 44% 33% 57% / 34% 48% 41% 38%;
-    box-shadow: 6px 6px 20px 5px  #08415cad;
+    box-shadow: 6px 6px 20px 5px  var(--c-primary);
   }
  
 

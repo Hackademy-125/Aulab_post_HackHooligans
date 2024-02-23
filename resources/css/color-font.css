@@ -1,9 +1,11 @@
 /* FONT PER IL TESTO  */
 h1, h2, h3, h4, h5, h6{
     font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
 }
 .font-title{
     font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
 }
 
 *{
@@ -22,4 +24,5 @@ h1, h2, h3, h4, h5, h6{
     --c-primary: #08415cad;
     --c-secondary: rgba(0, 0, 0, 0.859);
     --c-tertiary: white;
+    --c-accent: #222;
 }

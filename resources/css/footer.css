@@ -10,7 +10,7 @@ width: 150px;
 
 .footer-distributed{
   /* background: #dcdad3; */
-  background-color: #08415cad;
+  background-color: var(--c-primary);
   bottom: 0;
   width: 100%;
   margin-top: 200px; 
@@ -40,7 +40,7 @@ width: 150px;
 }
 
 .footer-distributed .footer-company-name{
-  color:  #222;
+  color: var(--c-accent);
   font-size: 14px;
   font-weight: normal;
   margin: 0;
