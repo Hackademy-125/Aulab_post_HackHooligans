@@ -35,14 +35,13 @@
     padding: 5px 10px; 
     font-size: 20px; 
 }
-.button{
-    
+.button{ 
     background-color: white!important;
     color: black !important;
     padding: 15px 50px;
     border: 2px solid rgb(20, 11, 11, 0.251) ;
     border-radius: 15px!important;
-    transition: 1.2s!important;
+    transition: 1s!important;
     position: relative!important;
     overflow: hidden!important;
 }

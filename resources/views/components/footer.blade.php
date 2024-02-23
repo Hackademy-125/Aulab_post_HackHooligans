@@ -9,10 +9,10 @@
         <div class="col-lg-4 my-3 text-center">
             <img class="img-footer my-0" src="/storage/images/logoAulabPost.png" alt="Logo the aulab post">
             <p class="footer-links">
-                <a href="{{ route('homepage') }}" class="text-dark">Home</a>
-                <a href="#" class="text-dark">Blog</a>
-                <a href="{{ route('aboutUs') }}" class="text-dark">About us</a>
-                
+                <a href="{{ route('homepage') }}" class="text-dark">Home | </a>
+                <a href="{{route('article.index')}}" class="text-dark">Articoli | </a>
+                <a href="{{route('aboutUs')}}" class="text-dark">About |</a>
+                <a href="#" class="text-dark">Faq</a>
             </p>
             <p class="footer-company-name">The Aulab Post © 2024</p>
         </div>
