@@ -1,5 +1,9 @@
 <x-layout>
+<<<<<<< HEAD
     <header>
+=======
+    <header id="header">
+>>>>>>> 605d4e59ba28e4bc0b2bf6341c9338b0a5129910
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-12 p-0">
@@ -34,7 +38,9 @@
     </header>
 
 
-    <div class="container my-5">
+
+
+    <article class="container my-5" id="article_cards">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-6 col-lg-3 my-3">
@@ -50,5 +56,6 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </article>
+    
 </x-layout>

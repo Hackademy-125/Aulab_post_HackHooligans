@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer-distributed">
+<footer class="footer-distributed" id="footer">
     <div class="container-fluid">
         <div class="row">
             <!-- Colonna sinistra -->
