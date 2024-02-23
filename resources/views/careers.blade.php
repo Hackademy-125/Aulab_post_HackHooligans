@@ -1,17 +1,28 @@
 <x-layout>
-    <div class="container-fluid p-5  text-center text-white bg-p">
-        <div class="row">
-            <h1 class="display-5">Clicca il pulsante per far parte del nostro team, ti stiamo aspettando!<h1>
-                <div class="col-12 col-md-6">
-                    <a href="#form" class="button-application">Contattaci</a>
-                </div>
+    <div class="container-fluid p-5 header-careers">
+        <div class="row  justify-content-center align-items-center">
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center">
+                <h1 class="display-5 mt-5">Entra a far parte del nostro team<h1>
+            </div>
         </div>
+
+        <div class="row justify-content-center align-items-center mt-5">
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+                <a href="#form" class="button-header-2  btn-header-2">Contattaci</a>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+                <a href="#content" class="button-header-2  btn-header-2">Scopri di più</a>
+            </div>
+        </div>
+
     </div>
 
+    {{-- sezione articoli lavoratori --}}
     <section class="container-fluid mt-5">
         <article class="row">
             <div class="col-12 col-md-6">
-                <h2 class="font-title">Lavora come Amministratore</h2>
+                <h2 class="font-title" id="content">Lavora come Amministratore</h2>
                 <p class="font-paragraph">
                     Roberto, un abile amministratore, opera con precisione all’interno di The Aulab Post. La sua
                     responsabilità principale è monitorare attentamente le richieste di lavoro che giungono attraverso

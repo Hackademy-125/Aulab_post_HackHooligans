@@ -36,7 +36,7 @@
     font-size: 20px; 
 }
 .button{ 
-    background-color: var(--c-secondary)!important;
+    background-color: var(--c-tertiary)!important;
     color: var(--c-primary) !important;
     padding: 15px 50px;
     border: 2px solid rgb(20, 11, 11, 0.251) ;
@@ -50,7 +50,7 @@
 }
 .btn1:hover{
     background-color: var(--c-primary)!important;
-    color: var(--c-secondary)!important;
+    color: var(--c-tertiary)!important;
 }
 .button::before{
     content: "";
