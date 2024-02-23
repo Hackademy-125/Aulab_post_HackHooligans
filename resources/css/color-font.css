@@ -1,0 +1,16 @@
+/* FONT PER IL TESTO  */
+.font-title{
+    font-family: "Playfair Display", serif;
+}
+
+.font-paragraph{
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.color-p{
+    color: #08415cad;
+}
+
+.bg-p{
+    background-color: #08415cad;
+}

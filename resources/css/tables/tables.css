@@ -1,0 +1,16 @@
+/* Bottoni delle tabelle degli articoli  */
+.button-table{ 
+    background-color: white!important;
+    color: black !important;
+    padding: 5px;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+    border-radius: 15px!important;
+    transition: 0.4s!important;
+    position: relative!important;
+    overflow: hidden!important;
+}
+
+.button-table:hover{
+    background-color: #08415cad!important;
+    color: white!important;
+}

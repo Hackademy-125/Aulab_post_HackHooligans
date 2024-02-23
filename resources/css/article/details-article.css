@@ -1,0 +1,30 @@
+/* Bottoni del dettagli degli articoli */
+.button-details{ 
+    background-color: white!important;
+    color: black !important;
+    padding: 15px 50px;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+    border-radius: 15px!important;
+    transition: 1s!important;
+    position: relative!important;
+    overflow: hidden!important;
+}
+.btn-delete:hover{
+    background-color: red!important;
+    color: white!important;
+}
+
+/* Bottone di conferma  */
+.btn-confirm:hover{
+    background-color: green!important;
+    color: white!important;
+}
+
+/* Bottone di ritorno alla homepage  */
+.btn-return{
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+}
+.btn-return-hover:hover{
+    background-color: #08415cad !important;
+    color: white!important;
+}
