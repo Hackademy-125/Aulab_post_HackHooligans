@@ -195,7 +195,11 @@
     transform: translateX(200%);
 }
 
+.text-index{
+    filter: drop-shadow(15px 7px 7px var(--c-secondary)) ;
 
+
+}
 
 
 
