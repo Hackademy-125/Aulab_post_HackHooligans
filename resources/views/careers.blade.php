@@ -7,11 +7,11 @@
         </div>
 
         <div class="row justify-content-center align-items-center mt-5">
-            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
                 <a href="#form" class="button-header-2  btn-header-2">Contattaci</a>
             </div>
 
-            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
                 <a href="#content" class="button-header-2  btn-header-2">Scopri di più</a>
             </div>
         </div>
