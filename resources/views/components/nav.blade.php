@@ -20,7 +20,6 @@
                     <ul class="dropdown-menu ">
                         @foreach ($categories as $category)
                             <li>
-
                                 <a class="buttondrop btndrop"
                                     href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
                             </li>
