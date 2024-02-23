@@ -77,8 +77,10 @@ let observer2 = new IntersectionObserver((entries) => {
     })
 });
 observer2.observe(footer);
-
 // FINE SCROLL NAVBAR 
+
+
+
 
 
 

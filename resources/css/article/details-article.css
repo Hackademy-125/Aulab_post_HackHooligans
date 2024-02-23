@@ -1,7 +1,10 @@
+
+
+
 /* Bottoni del dettagli degli articoli */
 .button-details{ 
-    background-color: white!important;
-    color: black !important;
+    background-color: var(--c-tertiary)!important;
+    color: var(--c-secondary) !important;
     padding: 15px 50px;
     border: 2px solid rgb(20, 11, 11, 0.251) ;
     border-radius: 15px!important;
@@ -10,13 +13,13 @@
     overflow: hidden!important;
 }
 .btn-delete:hover{
-    background-color: red!important;
+    background-color: rgba(255, 0, 0, 0.744)!important;
     color: white!important;
 }
 
 /* Bottone di conferma  */
 .btn-confirm:hover{
-    background-color: green!important;
+    background-color: rgba(0, 128, 0, 0.747)!important;
     color: white!important;
 }
 
@@ -25,6 +28,6 @@
     border: 2px solid rgb(20, 11, 11, 0.251) ;
 }
 .btn-return-hover:hover{
-    background-color: #08415cad !important;
-    color: white!important;
+    background-color: var(--c-primary)!important;
+    color: var(--c-tertiary)!important;
 }
