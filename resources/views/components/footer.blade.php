@@ -35,17 +35,18 @@
             <p class="my5">"Esplora il mondo attraverso l'insaziabile sete di conoscenza. La cultura è la chiave che apre le porte della comprensione, la cultura è The Aulab Post."</p>
             <div>
               
-                <a href="{{ url('https://www.facebook.com/aulab') }}" class="me-4 text-reset mt-5">
+                <a href="{{ url('https://www.facebook.com/aulab') }}" target="_blank" class="me-4 text-reset mt-5">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="{{ url('https://api.whatsapp.com/send/?phone=393339513967&text=Ciao%21+Vorrei+avere+maggiori+informazioni+sul+corso+Hackademy+per+diventare+web+developer&type=phone_number&app_absent=0') }}" class="me-4 text-reset">
+                <a href="{{ url('https://api.whatsapp.com/send/?phone=393339513967&text=Ciao%21+Vorrei+avere+maggiori+informazioni+sul+corso+Hackademy+per+diventare+web+developer&type=phone_number&app_absent=0') }}" target="_blank" class="me-4 text-reset">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="{{ url('https://www.instagram.com/aulab_it/') }}" class="me-4 text-reset">
+                <a href="{{ url('https://www.instagram.com/aulab_it/') }}" target="_blank" class="me-4 text-reset">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="{{ url('https://www.linkedin.com/school/aulab-srl/') }}" class="me-4 text-reset">
+                <a href="{{ url('https://www.linkedin.com/school/aulab-srl/') }}" target="_blank" class="me-4 text-reset">
                     <i class="fab fa-linkedin"></i>
+                </a>
                 </a>
                 </div>
             </div>
