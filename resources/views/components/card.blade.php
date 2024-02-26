@@ -24,7 +24,6 @@
         </div>
 
 
-
     </div>
 
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">

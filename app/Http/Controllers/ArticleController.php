@@ -88,6 +88,18 @@ class ArticleController extends Controller
             $tags[$i] = trim($tag);
         }
 
+<<<<<<< HEAD
+       foreach($tags as $tag){
+        $newTag = Tag::updateOrCreate(
+        ['name' => $tag],
+        ['name' => strtolower($tag)], 
+        );
+        $article->tags()->attach($newTag);
+       }
+        
+       
+       return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
+=======
         foreach ($tags as $tag) {
             $newTag = Tag::updateOrCreate(
                 ['name' => $tag],
@@ -98,6 +110,7 @@ class ArticleController extends Controller
 
 
         return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
+>>>>>>> 53bfa326497d787bf537e37c82a5c50d2c31b787
     }
 
     /**

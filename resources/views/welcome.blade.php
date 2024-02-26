@@ -1,4 +1,13 @@
 <x-layout>
+
+    <div>
+        @if (session('message'))
+        <div class="alert alert-success text-center">
+            {{ session('message') }}
+        </div>
+    @endif
+    </div>
+    
     <header id="header">
         <div class="container-fluid ">
             <div class="row">
@@ -33,6 +42,14 @@
         </div>
     </header>
 
+<<<<<<< HEAD
+  
+
+
+
+
+=======
+>>>>>>> 53bfa326497d787bf537e37c82a5c50d2c31b787
     <article class="container my-5" id="article_cards">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
