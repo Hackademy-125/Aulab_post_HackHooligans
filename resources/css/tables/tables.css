@@ -1,7 +1,7 @@
 /* Bottoni delle tabelle degli articoli  */
 .button-table{ 
-    background-color: white!important;
-    color: black !important;
+    background-color: var(--c-primary)!important;
+    color: var(--c-tertiary) !important;
     padding: 5px;
     border: 2px solid rgb(20, 11, 11, 0.251) ;
     border-radius: 15px!important;
@@ -11,6 +11,54 @@
 }
 
 .button-table:hover{
-    background-color: #08415cad!important;
-    color: white!important;
+    background-color: var(--c-tertiary)!important;
+    color: var(--c-primary)!important;
+}
+
+.button-details-delete{ 
+    background-color: rgba(255, 0, 0, 0.744)!important;
+    color: var(--c-tertiary) !important;
+    padding: 5px;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+    border-radius: 15px!important;
+    transition: 1s!important;
+    position: relative!important;
+    overflow: hidden!important;
+}
+
+.btn-delete2:hover{
+    background-color: var(--c-tertiary)!important;
+    color:  rgba(255, 0, 0, 0.744)!important;
+}
+/* form tables */
+.p-table{
+    padding: 5px 300px!important;
+}
+.form-table{
+    border-radius: 20px;
+    padding: 5px 80px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(128, 128, 128, 0.022);
+    border: 2px solid rgba(0, 0, 0, 0.122);
+}
+.form-table input{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgba(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form-table select{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgb(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form-table textarea{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgb(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
 }

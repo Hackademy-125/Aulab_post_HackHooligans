@@ -35,7 +35,7 @@ return new class extends Migration
             'Politica' => 'fas fa-balance-scale',
             'Sport' => 'fas fa-futbol',
             'Tech' => 'fas fa-laptop',
-            'Viaggi' => 'fas fa-plane'
+            'Viaggi' => 'fas fa-plane',
         ];
 
         foreach ($categories as $category) {

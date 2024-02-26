@@ -36,4 +36,27 @@
         </div>
     </div>
 
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2>I tags della piattaforma</h2>
+                <x-metainfo-table :metaInfos="$tags" metaType="tags"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2>Le categorie della piattaforma</h2>
+                <x-metainfo-table :metaInfos="$categories" metaType="categories"/>
+                <form action="{{ route('admin.storeCategory')}}" class="d-flex" method="POST">
+                    @csrf
+                    <input type="text" name="name" class="form-table p-table" placeholder=" Nuova categoria">
+                    <button type="submit" class="button btn1 ms-2">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </x-layout>

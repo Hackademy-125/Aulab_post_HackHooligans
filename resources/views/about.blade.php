@@ -17,7 +17,8 @@
         <div class="row align-items-center flex-column">
 
             <div class="col-12 col-md-6 d-flex justify-content-center">
-              <a href="{{route('homepage')}}"> <img src="image/Minimal_initial_brand_logo_2.png" alt="" width="150px"> </a>
+                <a href="{{ route('homepage') }}"> <img src="image/Minimal_initial_brand_logo_2.png" alt=""
+                        width="150px"> </a>
             </div>
         </div>
 
@@ -39,11 +40,6 @@
                 <a href="{{route('homepage')}}" type="submit" class= "button-header-2 btn-header-2 my-2 ">HomePage</a>
             </div>
         </div>
-       
-
     </header>
-
-
 </body>
-
 </html>
