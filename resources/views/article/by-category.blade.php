@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5  text-center ">
+    <div class="container-fluid p-5  text-center mt-5">
         <div class="row">
             <h1 class="text-index display-2">
                 {{$category->name ?? 'non categorizzato'}}

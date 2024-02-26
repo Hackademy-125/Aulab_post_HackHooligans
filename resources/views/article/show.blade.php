@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5  text-center text-index ">
+    <div class="container-fluid p-5  text-center text-index mt-5">
         <div class="row">
             <h1 class="display-2">
                 <span class="font-title">{{ $article->title }}</span>
