@@ -70,3 +70,6 @@ Route::middleware('writer')->group(function () {
     //TODO ROUTE DI TIPO POST PER L'INVIO DEI DATI DEL FORM DELL'ARTICOLO
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });
+
+    //TODO ROUTE PER LA RICERCA ARTICOLI
+    Route::get('/article/search',[ArticleController::class,'articleSearch'])->name('article.search');
