@@ -14,9 +14,10 @@
                                 <input type="text" class="form-control" placeholder="Sottotitolo" name='subtitle'>
                             </div>
 
-                            <div class="mb-3 my-3">
+                            <div class="mb-3">
                                 <input class="form-control" type="file" id="formFile"
                                     placeholder="Foto di copertina" name='image'>
+                                    <p class="fs-form-immagine">*dimensione consigliata: 500px x 500px</p>
                             </div>
 
                             <div class="mb-3">

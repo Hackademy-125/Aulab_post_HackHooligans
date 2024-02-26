@@ -1,7 +1,7 @@
 <nav class="navbar nav-custom navbar-expand-lg  transition ">
     <div class="container-fluid fs-5">
-        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png" id="nav_logo"
-                alt="Logo the aulab post"></a>
+        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/storage/images/logoAulabPost.png"
+                id="nav_logo" alt="Logo the aulab post"></a>
 
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
@@ -40,11 +40,6 @@
                 @endguest
 
                 @Auth
-
-
-
-
-
                 </ul>
                 <ul class="p-0 ">
                     <li class="nav-item me-5 dropdown d-flex justify-content-end mt-1">
@@ -81,5 +76,3 @@
         </div>
     </div>
 </nav>
-
-

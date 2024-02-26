@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 bg-info text-center text-white">
         <div class="row">
             <h1>
-                Utente: {{$user->name}}
+                Redattore: {{$user->name}}
             </h1>
         </div>
     </div>
