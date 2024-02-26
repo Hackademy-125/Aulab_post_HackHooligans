@@ -26,6 +26,7 @@
        
 
     </div>
+
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">
         <span class="redazione">Redatto il {{ $data }} da <a
                 href="{{ $urlUser }}">{{ $user }}</a></span>

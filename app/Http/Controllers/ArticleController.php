@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth')->except('index', 'show', 'byUser', 'byCategory', 'articleSearch');
     }
     /**
@@ -19,18 +20,19 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::where('is_accepted', true)->orderBy('created_at' , 'desc')->get();
-        return view('article.index' , compact('articles'));
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('article.index', compact('articles'));
     }
 
-    public function articleSearch(Request $request){
-        $query = $request ->input('query');
+    public function articleSearch(Request $request)
+    {
+        $query = $request->input('query');
         $articles = Article::search($query)->where('is_accepted', true)->orderby('created_at', 'desc')->get();
-        
-        return view ('article.search-index', compact('articles', 'query'));
+
+        return view('article.search-index', compact('articles', 'query'));
     }
-        
-    
+
+
 
     //!FILTRO PER UTENTE
     public function byUser(User $user)
@@ -39,14 +41,14 @@ class ArticleController extends Controller
         return view('article.by-user', compact('user', 'articles'));
     }
 
-    
+
     //!FILTRO PER CATEGORIA ___ DESC = DECRESCENTE
     public function byCategory(Category $category)
     {
-        $articles = $category->articles()->where('is_accepted', true)->orderby('created_at' , 'desc')->get();
-        return view('article.by-category' , compact('category' , 'articles'));
+        $articles = $category->articles()->where('is_accepted', true)->orderby('created_at', 'desc')->get();
+        return view('article.by-category', compact('category', 'articles'));
     }
-    
+
 
     /**
      *!Pagina di creazione articolo 
@@ -62,30 +64,31 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
 
-       $request->validate([
-        'title' =>'required|min:3',
-        'subtitle' =>'required|min:3',
-        'body' =>'required|min:5',
-        'image' =>'image',
-        'category' =>'required',
-        'tags' =>'required',
-       ]);
+        $request->validate([
+            'title' => 'required|min:3',
+            'subtitle' => 'required|min:3',
+            'body' => 'required|min:5',
+            'image' => 'image',
+            'category' => 'required',
+            'tags' => 'required',
+        ]);
 
-       $article = Article::create([
-        'title' => $request->title,
-        'subtitle' => $request->subtitle,
-        'body' =>  $request->body,
-        "image" => $request->image ? $request->file('image')->store('public/images') : "public/images/OIP.jpg",
+        $article = Article::create([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' =>  $request->body,
+            "image" => $request->image ? $request->file('image')->store('public/images') : "public/images/OIP.jpg",
+            'category_id' => $request->category,
+            'user_id' => Auth::user()->id,
+        ]);
 
-        'category_id' =>$request->category,
-        'user_id' => Auth::user()->id,
-       ]);
 
-       $tags = explode(',', $request->tags);
-       foreach($tags as $i => $tag){
+        $tags = explode(',', $request->tags);
+        foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);
-       }
+        }
 
+<<<<<<< HEAD
        foreach($tags as $tag){
         $newTag = Tag::updateOrCreate(
         ['name' => $tag],
@@ -96,6 +99,18 @@ class ArticleController extends Controller
         
        
        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
+=======
+        foreach ($tags as $tag) {
+            $newTag = Tag::updateOrCreate(
+                ['name' => $tag],
+                ['name' => strtolower($tag)],
+            );
+            $article->tags()->attach($newTag);
+        }
+
+
+        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
+>>>>>>> 53bfa326497d787bf537e37c82a5c50d2c31b787
     }
 
     /**
@@ -130,4 +145,3 @@ class ArticleController extends Controller
         //
     }
 }
-

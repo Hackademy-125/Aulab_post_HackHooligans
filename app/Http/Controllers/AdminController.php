@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -37,7 +38,9 @@ class AdminController extends Controller
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso writer l\'utente scelto');
     }
 
-    public function editTag ( Request $request , Tag $tag){
+    // EDIT DEI TAG 
+
+    public function editTag( Request $request , Tag $tag){
         $request->validate([
             'name' =>'required|unique:tags',
         ]);
@@ -61,4 +64,34 @@ class AdminController extends Controller
     }
 
 
+    // EDIT DELLE CATEGORIE 
+
+    public function editCategory ( Request $request , Category $category){
+        $request->validate([
+            'name' =>'required|unique:categories',
+        ]);
+
+        $category->update([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente modificato la categoria');
+
+    }
+
+    public function deleteCategory(Category $category){
+    
+        $category->delete();
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato la categoria');
+    }
+
+
+    public function storeCategory(Request $request){
+        Category::create([
+            'name' => ($request->name)
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente inserito una nuova categoria');
+
+    }
 }

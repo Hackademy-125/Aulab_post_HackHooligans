@@ -18,19 +18,19 @@
                             data-bs-pause="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active" data-bs-interval="5000">
-                                    <img src="{{ asset('/image/moda.jpg') }}" class="d-block w-100" alt="Moda">
+                                    <img src="{{ asset('./image/moda.jpg') }}" class="d-block w-100" alt="Moda">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{{ asset('/image/auto2.jpg') }}" class="d-block w-100" alt="Auto">
+                                    <img src="{{ asset('./image/auto2.jpg') }}" class="d-block w-100" alt="Auto">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{{ asset('/image/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
+                                    <img src="{{ asset('./image/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{{ asset('/image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
+                                    <img src="{{ asset('./image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{{ asset('/image/tecnologia.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('./image/tecnologia.jpg') }}" class="d-block w-100"
                                         alt="Tecnologia">
                                 </div>
                             </div>
@@ -42,11 +42,14 @@
         </div>
     </header>
 
+<<<<<<< HEAD
   
 
 
 
 
+=======
+>>>>>>> 53bfa326497d787bf537e37c82a5c50d2c31b787
     <article class="container my-5" id="article_cards">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
