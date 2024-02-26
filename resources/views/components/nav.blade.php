@@ -34,10 +34,12 @@
                 </li>
                 @guest
                 </ul>
+                
                 <ul class="navbar-nav ">
                     <li class="nav-item fs-custom-nav">
                         <a class="nav-link p-0 custom-link  " href="{{ route('access.form') }}">Registrati/Accedi</a>
                     </li>
+                    
                 @endguest
 
                 @Auth
@@ -78,9 +80,15 @@
                     </li>
 
                 </ul>
+                
             @endauth
+            
         </div>
     </div>
+    <form class="d-flex" method="GET" action="{{route('article.search')}}">
+        <input class="form-control me-2 " type="search" placeholder="" aria-label="Search" name="query">
+        <button class="btn1 button1" type="submit">Cerca</button>
+      </form>
 </nav>
 
 

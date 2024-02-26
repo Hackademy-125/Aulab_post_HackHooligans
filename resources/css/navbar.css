@@ -103,3 +103,8 @@
 .btndrop:hover::before{
     height: 180%;
 }
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid black;
+}

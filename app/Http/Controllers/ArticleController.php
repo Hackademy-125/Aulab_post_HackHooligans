@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class ArticleController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth')->except('index', 'show', 'byUser', 'byCategory');
+        $this->middleware('auth')->except('index', 'show', 'byUser', 'byCategory', 'articleSearch');
     }
     /**
      * Display a listing of the resource.
@@ -22,6 +22,14 @@ class ArticleController extends Controller
         return view('article.index' , compact('articles'));
     }
 
+    public function articleSearch(Request $request){
+        $query = $request ->input('query');
+        $articles = Article::search($query)->where('is_accepted', true)->orderby('created_at', 'desc')->get();
+        
+        return view ('article.search-index', compact('articles', 'query'));
+    }
+        
+    
 
     //!FILTRO PER UTENTE
     public function byUser(User $user)

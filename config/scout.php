@@ -1,22 +1,7 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Default Search Engine
-    |--------------------------------------------------------------------------
-    |
-    | This option controls the default search connection that gets used while
-    | using Laravel Scout. This connection is used when syncing all models
-    | to the search service. You should adjust this based on your needs.
-    |
-    | Supported: "algolia", "meilisearch", "typesense",
-    |            "database", "collection", "null"
-    |
-    */
-
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -116,8 +101,22 @@ return [
         'id' => env('ALGOLIA_APP_ID', ''),
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
+    'tntsearch' => [
+        'storage' => storage_path(),
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
+        'fuzzy' => [
+            'prefix_lenght' => 2,
+            'max_expansions' => 50,
+            'distance' => 2
+        ],
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
+    ],
 
+    'driver' => env('SCOUT_DRIVER', 'tntsearch'),
     /*
+    
     |--------------------------------------------------------------------------
     | Meilisearch Configuration
     |--------------------------------------------------------------------------
