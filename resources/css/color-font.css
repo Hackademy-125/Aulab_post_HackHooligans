@@ -1,16 +1,28 @@
 /* FONT PER IL TESTO  */
+h1, h2, h3, h4, h5, h6{
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+}
 .font-title{
     font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
 }
 
-.font-paragraph{
+*{
     font-family: "Nanum Gothic", sans-serif;
 }
 
 .color-p{
-    color: #08415cad;
+    color: var(--c-primary);
 }
 
 .bg-p{
-    background-color: #08415cad;
+    background-color: var(--c-primary);
+}
+
+:root{
+    --c-primary: #08415cad;
+    --c-secondary: rgba(0, 0, 0, 0.859);
+    --c-tertiary: white;
+    --c-accent: #222;
 }
