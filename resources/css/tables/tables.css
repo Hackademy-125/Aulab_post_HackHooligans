@@ -62,3 +62,44 @@
     border-radius: 15px;
     cursor: pointer;
 }
+
+/* form navbar search*/
+
+.p-table2{
+    padding: 5px!important;
+}
+.form-table2{
+    border-radius: 20px;
+    padding: 5px 80px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(128, 128, 128, 0.022);
+    color: white;
+    border: 2px solid var(--c-tertiary);
+}
+.form-table2 input{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgba(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form-table2 select{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgb(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form-table2 textarea{
+    text-align: center;
+    padding: 10px 50px;
+    border: 2px solid rgb(20, 11, 11, 0.251);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.form-table2::placeholder{
+    color: white;
+}
+
+

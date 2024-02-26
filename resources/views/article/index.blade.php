@@ -1,6 +1,6 @@
 <x-layout>
-    <header class="text-index">
-        <div class="container-fluid p-5 text-center">
+    <header class="text-index mt-5">
+        <div class="container-fluid p-5 text-center ">
             <div class="row">
                 <h1 class="display-1 ">
                     I nostri articoli
