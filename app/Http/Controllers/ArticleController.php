@@ -93,7 +93,8 @@ class ArticleController extends Controller
         );
         $article->tags()->attach($newTag);
        }
-
+        
+       
        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
     }
 

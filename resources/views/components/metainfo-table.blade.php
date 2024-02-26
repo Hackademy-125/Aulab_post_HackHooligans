@@ -4,7 +4,7 @@
             <th scope="col">#</th>
             <th scope="col">Nome Tag</th>
             <th scope="col">Q.ta articoli collegati</th>
-            <th scope="col">Aggiorna</th>
+            <th scope="col" class="text-center">Aggiorna</th>
             <th scope="col">Cancella</th>
         </tr>
     </thead>
@@ -20,8 +20,8 @@
                         <form action="{{route('admin.editTag' , ['tag' => $metaInfo]) }}" method="POST">
                             @csrf
                             @method('put')
-                            <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control">
-                            <button type="submit" class="button btn1">Aggiorna</button>
+                            <input type="text" name="name" placeholder="Nuovo nome tag" class="form-table">
+                            <button type="submit" class="button-table">Aggiorna</button>
                         </form>
                     </td>
 
@@ -29,7 +29,7 @@
                         <form action="{{route('admin.deleteTag' , ['tag' => $metaInfo]) }}" method="POST">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="button btn1">Elimina</button>
+                            <button type="submit" class="button-details-delete btn-delete2">Elimina</button>
                         </form>
                     </td>
 
@@ -39,7 +39,7 @@
                             @csrf
                             @method('put')
                             <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-control">
-                            <button type="submit" class="button btn1">Aggiorna</button>
+                            <button type="submit" class="button-table">Aggiorna</button>
                         </form>
                     </td>
 
@@ -47,7 +47,7 @@
                         <form action="" method="">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="button btn1">Aggiorna</button>
+                            <button type="submit" class="button-details-delete btn-delete2">Elimina</button>
                         </form>
                     </td>
                 @endif

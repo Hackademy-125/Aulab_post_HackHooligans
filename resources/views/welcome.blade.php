@@ -1,4 +1,13 @@
 <x-layout>
+
+    <div>
+        @if (session('message'))
+        <div class="alert alert-success text-center">
+            {{ session('message') }}
+        </div>
+    @endif
+    </div>
+    
     <header id="header">
         <div class="container-fluid ">
             <div class="row">
@@ -32,6 +41,8 @@
             </div>
         </div>
     </header>
+
+  
 
 
 

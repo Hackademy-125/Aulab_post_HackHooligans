@@ -10,6 +10,9 @@
             <a href="{{ $urlCategory }}">
                 <p class="small text-muted mb-0">{{ $category }}</p>
             </a>
+            <div class="custom-line my-0 custom-size">
+                
+            </div>
             @if($tags)
                 <p class="small fst-italic">
                     @foreach ($tags as $tag)
@@ -18,13 +21,9 @@
                 </p>
             @endif
 
-
-
-
         </div>
-        <div class="custom-line my-0 custom-size">
 
-        </div>
+       
 
     </div>
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">

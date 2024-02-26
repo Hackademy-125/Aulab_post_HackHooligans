@@ -22,8 +22,8 @@
     <section class="container-fluid mt-5">
         <article class="row">
             <div class="col-12 col-md-6">
-                <h2 class="font-title" id="content">Lavora come Amministratore</h2>
-                <p class="font-paragraph">
+                <h2 class="font-title">Lavora come Amministratore</h2>
+                <p class="font-paragraph" id="content">
                     Roberto, un abile amministratore, opera con precisione all’interno di The Aulab Post. La sua
                     responsabilità principale è monitorare attentamente le richieste di lavoro che giungono attraverso
                     la piattaforma. Con occhio vigile, esamina i profili dei candidati, verifica le competenze e valuta
@@ -122,9 +122,9 @@
 
                     <div class="mb-3">
                         <label for="message" class="form-label">Parlaci di te</label>
-                        <textarea name="message" id="message" cols="30" rows="5" class="form-control">{{ old('message') }}</textarea>
+                        <textarea name="message" cols="30" rows="5" class="form-control">{{ old('message') }}</textarea>
                     </div>
-                    <div class="custom-btn mt-2">
+                    <div class="custom-btn mt-2" id="message">
                         <button type="submit" class= "button-application">Invia la tua candidatura</button>
                     </div>
                 </form>
