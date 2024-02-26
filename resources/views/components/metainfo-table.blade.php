@@ -38,7 +38,7 @@
                         <form action="{{route('admin.editCategory' , ['category' => $metaInfo]) }}" method="POST">
                             @csrf
                             @method('put')
-                            <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-control">
+                            <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-table">
                             <button type="submit" class="button-table">Aggiorna</button>
                         </form>
                     </td>
@@ -47,11 +47,7 @@
                         <form action="{{route('admin.deleteCategory' , ['category' => $metaInfo]) }}" method="POST">
                             @csrf
                             @method('delete')
-<<<<<<< HEAD
                             <button type="submit" class="button-details-delete btn-delete2">Elimina</button>
-=======
-                            <button type="submit" class="button btn1">Elimina</button>
->>>>>>> 53bfa326497d787bf537e37c82a5c50d2c31b787
                         </form>
                     </td>
                 @endif
