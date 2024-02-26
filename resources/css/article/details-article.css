@@ -14,13 +14,13 @@
 }
 .btn-delete:hover{
     background-color: rgba(255, 0, 0, 0.744)!important;
-    color: white!important;
+    color: var(--c-tertiary)!important;
 }
 
 /* Bottone di conferma  */
 .btn-confirm:hover{
     background-color: rgba(0, 128, 0, 0.747)!important;
-    color: white!important;
+    color: var(--c-tertiary)!important;
 }
 
 /* Bottone di ritorno alla homepage  */

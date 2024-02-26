@@ -2,8 +2,8 @@
     <header class="text-index">
         <div class="container-fluid p-5 text-center">
             <div class="row">
-                <h1 class="display-1 ">
-                    I nostri articoli
+                <h1 class="display-3 ">
+                    Tutti gli articoli per : {{$query}}
                 </h1>
             </div>
         </div>
@@ -11,8 +11,7 @@
 
 
 
-
-    <div class="container my-5">
+    <article class="container my-5" id="article_cards">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-6 col-lg-3 my-3">
@@ -28,6 +27,6 @@
                 </div>
             @endforeach
         </div>
-    </div>
-
+    </article>
+    
 </x-layout>

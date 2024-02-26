@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
                 <p class=" txt-about about-text"> Vieni a trovarci </p>
-                <a href="{{ route('homepage') }}" type="submit" class= "button btn1 my-2 ">HomePage</a>
+                <a href="{{route('homepage')}}" type="submit" class= "button-header-2 btn-header-2 my-2 ">HomePage</a>
             </div>
         </div>
     </header>

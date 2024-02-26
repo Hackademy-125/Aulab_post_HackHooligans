@@ -59,7 +59,10 @@
     font-size: 14px;
 }
 .custom-container button{
-    background-color: rgb(82, 142, 142);
+    /* background-color: rgb(82, 142, 142); */
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(148,187,233,1) 86%); */
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%); */
+    background-color: var(--c-primary);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -148,7 +151,10 @@
     border-radius: 0 150px 100px 0;
 }
 .toggle{
-    background-color: rgb(82, 142, 142);
+    /* background-color: rgb(82, 142, 142); */
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(148,187,233,1) 86%); */
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%); */
+    background-color: var(--c-primary);
     height: 100%;
     color: #fff;
     position: relative;
@@ -189,7 +195,11 @@
     transform: translateX(200%);
 }
 
+.text-index{
+    filter: drop-shadow(15px 7px 7px var(--c-secondary)) ;
 
+
+}
 
 
 

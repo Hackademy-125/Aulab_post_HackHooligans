@@ -1,7 +1,7 @@
 
 .nav-custom{
        backdrop-filter:blur(10px) ;
-    background-color: rgba(221, 234, 234, 0.066);
+    /* background-color: #08415cad; */
     
 }
 
@@ -15,7 +15,7 @@
     border: 1px solid black ;
     border-radius: 8px;
     backdrop-filter:blur(10px) ;
-    background-color: rgba(221, 234, 234, 0.066);
+    /* background-color:#08415cad; */
     z-index: 1000;
    position: sticky;
    top: 10px;
@@ -55,11 +55,11 @@
     transition: background-color 0.3s; 
 }
 
-.dropdown-menu li a:hover {
-    background-color: #f4f4f4; 
-}
+
 
 .custom-link {
+    color: black;     color: black; 
+
     text-decoration: none; 
     transition: color 0.3s; 
 }
@@ -71,20 +71,20 @@
 /* BOTTONE NAVBAR  */
 .buttondrop{
     
-    background-color: white!important;
-    color: black !important;
+    background-color: var(--c-tertiary)!important;
+    color: var(--c-primary) !important;
     /* padding: 15px 50px; */
     /* border-radius: 10px!important; */
-    transition: 0.8s!important;
+    transition: 1.2s!important;
     position: relative!important;
     overflow: hidden!important;
 }
 .btndrop{
-    color: black!important;
+    color: var(--c-primary)!important;
 }
 .btndrop:hover{
-    background-color: black!important;
-    color: white!important;
+    background-color: var(--c-primary)!important;
+    color: var(--c-tertiary)!important;
 }
 .buttondrop::before{
     content: "";
@@ -92,9 +92,9 @@
     left: 0;
     width: 100%;
     height: 0%;
-    background-color: black;
+    background-color: var(--c-primary);
     z-index: -1;
-    transition: 0.8s;
+    transition: 1.2s;
 }
 .btndrop::before{
     bottom: 0;
@@ -102,4 +102,9 @@
 }
 .btndrop:hover::before{
     height: 180%;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid black;
 }
