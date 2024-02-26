@@ -8,19 +8,19 @@
                 <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="5000">
-                            <img src="{{ asset('/storage/images/moda.jpg') }}" class="d-block w-100" alt="Moda">
+                            <img src="{{ asset('/image/moda.jpg') }}" class="d-block w-100" alt="Moda">
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="{{ asset('/storage/images/auto2.jpg') }}" class="d-block w-100" alt="Auto">
+                            <img src="{{ asset('/image/auto2.jpg') }}" class="d-block w-100" alt="Auto">
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="{{ asset('/storage/images/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
+                            <img src="{{ asset('/image/mondo.jpg') }}" class="d-block w-100" alt="Mondo">
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="{{ asset('/storage/images/politica.jpg') }}" class="d-block w-100" alt="Politica">
+                            <img src="{{ asset('/image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="{{ asset('/storage/images/tecnologia.jpg') }}" class="d-block w-100" alt="Tecnologia">
+                            <img src="{{ asset('/image/tecnologia.jpg') }}" class="d-block w-100" alt="Tecnologia">
                         </div>
                     </div>
                 </div>
@@ -35,9 +35,9 @@
 
 
     <div class="container my-5">
-        <div class="row justify-content-evenly">
+        <div class="row justify-content-center">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-7 col-lg-4 my-3">
+                <div class="col-12 col-md-3">
                     {{-- Card fatta con componente --}}
                     <x-card 
                     title="{{ $article->title }}" 
