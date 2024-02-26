@@ -31,6 +31,9 @@
     color:  rgba(255, 0, 0, 0.744)!important;
 }
 /* form tables */
+.p-table{
+    padding: 5px 300px!important;
+}
 .form-table{
     border-radius: 20px;
     padding: 5px 80px;
