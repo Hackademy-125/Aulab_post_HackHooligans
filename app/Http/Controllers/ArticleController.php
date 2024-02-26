@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
@@ -67,6 +68,7 @@ class ArticleController extends Controller
         'body' =>'required|min:5',
         'image' =>'image',
         'category' =>'required',
+        'tags' =>'required',
        ]);
 
        $article = Article::create([
@@ -79,6 +81,18 @@ class ArticleController extends Controller
         'user_id' => Auth::user()->id,
        ]);
 
+       $tags = explode(',', $request->tags);
+       foreach($tags as $i => $tag){
+            $tags[$i] = trim($tag);
+       }
+
+       foreach($tags as $tag){
+        $newTag = Tag::updateOrCreate(
+        ['name' => $tag],
+        ['name' => strtolower($tag)], 
+        );
+        $article->tags()->attach($newTag);
+       }
 
        return redirect(route('homepage'))->with('message', 'Articolo creato con successo!');
     }
