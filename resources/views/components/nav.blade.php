@@ -81,12 +81,9 @@
         </div>
     </div>
     <form class="d-flex align-items-center" method="GET" action="{{ route('article.search') }}">
-        <input class="form-control me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search" name="query">
+        <input class="form-table2 p-table2  me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search" name="query">
         <button type="submit" class="btn11"><i class="bi bi-search fs-4 search-icon "></i></button>
     </form>
     
-    {{-- <form class="d-flex" method="GET" action="{{route('article.search')}}">
-        <input class="form-control me-2 " type="search" placeholder="" aria-label="Search" name="query">
-        <button type="submit" class="btn11"><a href=""><i class="bi bi-search fs-4"></i></a></button></a>
-      </form> --}}
+   
 </nav>

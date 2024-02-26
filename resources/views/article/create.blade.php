@@ -10,8 +10,8 @@
         </div>
     @endif
 
-    <div class="container-fluid">
-        <div class="row justify-content-center my-5">
+    <div class="container-fluid mgn-custom">
+        <div class="row justify-content-center ">
             <div class="col-12 col-md-6 form-create">
                 <form action="{{ route('article.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
