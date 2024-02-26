@@ -6,10 +6,10 @@
         <h3 class="card-text mb-4">{{ $subtitle }}</h3>
 
         <div class="d-flex flex-column align-items-center justify-content-center ">
-            @if ($article->category)
+            @if ($category)
                 <a href="{{ $urlCategory }}" class="text-dark "> <i class=" {{ $icon }}"></i> </a>
                 <a href="{{ $urlCategory }}">
-                    <p class="small text-muted mb-0">{{ $category }}</p>
+                    <p class="custom-line my-0 custom-size small text-muted mb-0">{{ $category }}</p>
                 </a>
             @endif
 
@@ -20,10 +20,10 @@
                     @endforeach
                 </p>
             @endif
+
         </div>
 
-        <div class="custom-line my-0 custom-size">
-        </div>
+
 
     </div>
 

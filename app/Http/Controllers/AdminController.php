@@ -88,7 +88,9 @@ class AdminController extends Controller
 
     public function storeCategory(Request $request){
         Category::create([
-            'name' => ($request->name)
+            'name' => ($request->name),
+            'icon' => 'bi bi-globe',
+
         ]);
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente inserito una nuova categoria');

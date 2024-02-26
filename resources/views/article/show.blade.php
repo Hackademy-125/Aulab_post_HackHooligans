@@ -3,7 +3,7 @@
     <div class="container-fluid p-5  text-center text-index ">
         <div class="row">
             <h1 class="display-2">
-                 <span class="font-title">{{ $article->title }}</span>
+                <span class="font-title">{{ $article->title }}</span>
             </h1>
         </div>
     </div>
@@ -24,10 +24,22 @@
                         <p>Redatto da {{ $article->user->name }} il {{ $article->created_at->format('d/m/y') }}</p>
                     </div>
                 </div>
+
+                <div class="text-center">
+                    <div class="my-3">                 
+                            <p class="small fst-italic">
+                                @foreach ($article->tags as $tag)
+                                    #{{ $tag->name }}
+                                @endforeach
+                            </p>
+                    </div>
+                </div>
+
                 <hr>
                 <p class="font-paragraph">{{ $article->body }}</p>
                 <div class="text-center">
-                    <a href="{{ route('revisor.dashboard') }}" class="btn btn-return btn-return-hover text-dark my-5">Torna
+                    <a href="{{ route('revisor.dashboard') }}"
+                        class="btn btn-return btn-return-hover text-dark my-5">Torna
                         indietro</a>
                 </div>
 
