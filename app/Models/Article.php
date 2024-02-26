@@ -35,10 +35,6 @@ class Article extends Model
         'category' => $this->category,
         'title' => $this->title,
         'user_id' => $this->user_id,
-
-
-
-
        ];
     }
 
