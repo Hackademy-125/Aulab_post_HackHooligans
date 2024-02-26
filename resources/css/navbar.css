@@ -1,27 +1,39 @@
 
 .nav-custom{
-       backdrop-filter:blur(10px) ;
-    /* background-color: #08415cad; */
+    color: white;
+    margin: 5vh 3vw;
+    border: 1px solid black ;
+    border-radius: 8px;
+    backdrop-filter:blur(10px) ;
+    background-color:#08415c79;
+    position: fixed;
+    z-index: 10;
+    width: 94%;
+    height: 55px;
+}
+
+.nav-primary{
+    background-color:#08415cfa ;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0;
     
+    border-radius: 0px;
+    border: none ;
+    height: 55px;
 }
 
 .transition{
     transition: 500ms;
 }
 
-@media screen and (min-width:750px) {
-  .nav-custom {
-    margin: 5vh 3vw;
-    border: 1px solid black ;
-    border-radius: 8px;
-    backdrop-filter:blur(10px) ;
-    /* background-color:#08415cad; */
-    z-index: 1000;
-   position: sticky;
-   top: 10px;
-
-  }  
+.nav-link{
+    color:white;
 }
+
+
 
 .img-navbar {
     max-width: 60px;
@@ -58,7 +70,7 @@
 
 
 .custom-link {
-    color: black;     color: black; 
+    color: white;
 
     text-decoration: none; 
     transition: color 0.3s; 
@@ -107,4 +119,32 @@
 .form-control {
     background-color: transparent;
     border: 1px solid black;
+}
+
+/* RICERCA  */
+.btn11 {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.search-icon {
+    color: rgb(255, 255, 255); 
+    padding-right: 10px;
+}
+
+.search-input {
+    width: 110px; 
+    height: 30px;
+    border-color: rgb(253, 253, 253); 
+}
+
+.search-input:focus {
+    outline: none; 
+    border-color: rgb(253, 253, 253); 
+    box-shadow: none; 
+}
+ 
+.form-control::placeholder {
+    color: #ffffff; /* Cambia il colore del placeholder */
 }
