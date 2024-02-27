@@ -16,7 +16,9 @@
             @foreach ($articles as $article)
                 <div class="col-12 col-md-6 col-lg-3 my-3">
                     {{-- Card fatta con componente --}}
-                    <x-card title="{{ $article->title }}" 
+                    <x-card 
+                        :tags="$article->tags"
+                        title="{{ $article->title }}" 
                         subtitle="{{ $article->subtitle }}"
                         image="{{ Storage::url($article->image) }}"
                         category="{{ $article->category->name ?? 'non categorizzato' }}"
