@@ -65,12 +65,12 @@ class ArticleController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|min:3',
-            'subtitle' => 'required|min:3',
+            'title' => 'required|max:20',
+            'subtitle' => 'required|max:30',
             'body' => 'required|min:5',
             'image' => 'image',
             'category' => 'required',
-            'tags' => 'required',
+            'tags' => 'required|max:40',
         ]);
 
         $article = Article::create([
