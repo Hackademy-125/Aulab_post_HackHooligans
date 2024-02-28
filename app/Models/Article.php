@@ -23,8 +23,22 @@ class Article extends Model
         'category_id',
         'is_accepted',
         'user_id',
-        'icon'
+        'icon',
+        'slug',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function readDuration(){
+        $totalWords = str_word_count($this->body);
+        $minutesToRead = round($totalWords / 75);
+
+        return intval($minutesToRead);
+
+    }
 
     public function toSearchableArray()
     {

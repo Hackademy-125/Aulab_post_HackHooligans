@@ -15,7 +15,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-6 col-lg-3 my-3">
+                <div class="col-12 col-md-6 col-lg-3 my-3 d-flex justify-content-center align-items-center">
                     {{-- Card fatta con componente --}}
                     <x-card 
                         :tags="$article->tags"
@@ -28,7 +28,10 @@
                         user="{{ $article->user->name }}"
                         url="{{ route('article.show', compact('article')) }}"
                         urlCategory="{{ route('article.byCategory', ['category' => $article->category->id ?? 'categoria non trovata']) }}"
-                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" />
+                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
+                        readDuration="{{$article->readDuration()}}"
+                        :article="$article"
+                        />
 
                 </div>
             @endforeach
