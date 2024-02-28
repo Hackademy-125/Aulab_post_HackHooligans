@@ -3,13 +3,8 @@
     font-size: 18px;
 
 }
-/* Carosello */
-.carousel-inner{
-    height: 90vh;
-    background-size: cover;
-    background-position: center;
-    margin-top: -20px; 
-}
+
+
 
 .title-custom{
     z-index: 4;
@@ -198,7 +193,127 @@
 .text-index{
     filter: drop-shadow(15px 7px 7px var(--c-secondary)) ;
 
+}
 
+.nav-size{
+    font-size: 1.25rem;
+}
+
+.crs-custom{
+    /* height: 90vh!important; */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: -20px; 
+}
+
+.custom-mrg{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .title-custom{
+        z-index: 4;
+        position: absolute;
+        top: 75%; 
+        left: 50%; 
+        font-size: 35px;
+        color: var(--c-tertiary);
+        transform: translate(-50%, -50%); 
+        letter-spacing: 0px;
+        text-shadow: 3px 3px 5px black;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
+
+    .nav-size{
+        font-size: 15px;
+    }
+
+    .crs-custom{
+        height: 50vh!important;
+    }
+
+    .pd-nav{
+        padding: 0!important;
+    }
+
+    /* .custom-psn{
+     position:absolute;
+     top: 160px;
+    } */
+    .fs-nv-media{
+        font-size: 15px;
+    }
+
+    /* .mrg-nav{
+        position: relative;
+        top: 40px;
+        left: 12px;
+    } */
+}
+
+@media screen and (max-width: 992px){
+    .title-custom{
+
+        z-index: 4;
+        position: absolute;
+        top: 75%; 
+        left: 50%; 
+        font-size: 35px;
+        color: var(--c-tertiary);
+        transform: translate(-50%, -50%); 
+        letter-spacing: 0px;
+        text-shadow: 3px 3px 5px black;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
+
+    .nav-size{
+        font-size: 15px;
+    }
+
+    .crs-custom{
+        height: 50vh!important;
+    }
+
+    .pd-nav{
+        padding: 0!important;
+    }
+
+    .custom-psn{
+     position:absolute;
+     top: 160px;
+    }
+    /* .fs-nv-media{
+        font-size: 15px;
+    } */
+
+    .mrg-nav{
+        position: relative;
+        top: 40px;
+        left: 12px;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width:993px){
+    .title-custom{
+
+        z-index: 4;
+        position: absolute;
+        top: 25%; 
+        left: 50%; 
+        font-size: 45px;
+        color: var(--c-tertiary);
+        transform: translate(-50%, -50%); 
+        letter-spacing: 0px;
+        text-shadow: 3px 3px 5px black;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
 }
 
 
