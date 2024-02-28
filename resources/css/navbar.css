@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 10;
     width: 94%;
-    height: 55px;
+    min-height: 55px;
 }
 
 .nav-primary{
@@ -19,10 +19,9 @@
     z-index: 10;
     width: 100%;
     margin: 0;
-    
     border-radius: 0px;
     border: none ;
-    height: 55px;
+    min-height: 55px;
 }
 
 .transition{
@@ -144,4 +143,6 @@
     border-color: rgb(253, 253, 253); 
     box-shadow: none; 
 }
+
+
  

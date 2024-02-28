@@ -4,12 +4,12 @@
     <header id="header">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-12 p-0">
+                <div class="col-12 p-0 d-flex justify-content-center align-items-center">
                     <!-- Carosello header -->
                     <div class="position-relative mt-3">
                         <div id="caroselloheader" class="carousel slide carousel-fade" data-bs-ride="carousel"
                             data-bs-pause="false">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner crs-custom">
                                 <div class="carousel-item active" data-bs-interval="5000">
                                     <img src="{{ asset('./image/moda.jpg') }}" class="d-block w-100" alt="Moda">
                                 </div>
@@ -23,12 +23,17 @@
                                     <img src="{{ asset('./image/giornale.jpg') }}" class="d-block w-100" alt="Politica">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{{ asset('./image/tecnologia.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('./image/tecnologia.jpeg') }}" class="d-block w-100"
                                         alt="Tecnologia">
                                 </div>
                             </div>
                         </div>
-                        <h1 class="titles title-custom text-s mt-3">THE AULAB POST</h1>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h1 class=" title-custom text-s mt-3">THE AULAB POST</h1>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,95 +1,100 @@
-<nav class="navbar nav-custom navbar-expand-lg  transition nav-primary   ">
-    <div class="container-fluid fs-5">
-        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/image/Minimal_initial_brand_logo_2.png" id="nav_logo"
-                alt="Logo the aulab post"></a>
 
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="{{ route('homepage') }}">Home</a>
+
+
+<nav class="navbar navbar-expand-lg nav-custom transition nav-primary" aria-label="Fifth navbar example">
+    <div class="container-fluid nav-size">
+        <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/image/Minimal_initial_brand_logo_2.png"
+            id="nav_logo" alt="Logo the aulab post"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link pt-2  " aria-current="page" href="{{ route('homepage') }}">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link pt-2  " href="{{ route('article.index') }}">Articoli</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link pt-2  dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Categorie
+                </a>
+                <ul class="dropdown-menu ">
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="buttondrop btndrop"
+                                href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+
+            <li class="nav-item">
+                <a class="nav-link pt-2  " href="{{ route('careers') }}">Lavora con noi</a>
+            </li>
+
+            </li>
+            @guest
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item fs-custom-nav  me-2">
+                    <a class="nav-link  custom-link  pd-nav fs-nv-media"
+                        href="{{ route('access.form') }}">Registrati/Accedi</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Categorie
+            @endguest
+
+            @Auth
+
+            </ul>
+            <ul class="p-0 pt-lg-3 list-unstyled">
+                <li class="nav-item me-5 dropdown d-lg-flex justify-content-end mt-1">
+                    <a class="nav-link dropdown-toggle me-md-3 pt-lg-1" href="#" role="button" id="navbarDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person  me-2"></i>{{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu ">
-                        @foreach ($categories as $category)
-                            <li>
-                                <a class="buttondrop btndrop"
-                                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}</a>
+                    <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item buttondrop btndrop" href="{{ route('article.create') }}">Inserisci
+                                Articolo</a>
+                        </li>
+
+                        @if (Auth::user()->is_admin)
+                            <li><a class="dropdown-item buttondrop btndrop"
+                                    href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
                             </li>
-                        @endforeach
-                    </ul>
+                        @endif
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('careers') }}">Lavora con noi</a>
-                </li>
+                        @if (Auth::user()->is_revisor)
+                            <li><a class="dropdown-item buttondrop btndrop"
+                                    href="{{ route('revisor.dashboard') }}">Dashboard
+                                    Revisore</a></li>
+                        @endif
 
-                </li>
-                @guest
-                </ul>
-              
-                <ul class="navbar-nav ">
-                    <li class="nav-item fs-custom-nav">
-                        <a class="nav-link p-0 custom-link  " href="{{ route('access.form') }}">Registrati/Accedi</a>
-                    </li>
-                    
-                @endguest
-
-                @Auth
-                
-                </ul>
-                <ul class="p-0 my-auto ">
-                    <li class="nav-item me-5 dropdown d-flex justify-content-end mt-1">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person  fs-4"></i>{{ Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item buttondrop btndrop" href="{{ route('article.create') }}">Inserisci
-                                    Articolo</a>
-                            </li>
-
-                            @if (Auth::user()->is_admin)
-                                <li><a class="dropdown-item buttondrop btndrop"
-                                        href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
-                                </li>
-                            @endif
-
-                            @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item buttondrop btndrop"
-                                        href="{{ route('revisor.dashboard') }}">Dashboard
-                                        Revisore</a></li>
-                            @endif
-
-                            @if (Auth::user()->is_writer)
+                        @if (Auth::user()->is_writer)
                             <li><a class="dropdown-item buttondrop btndrop"
                                     href="{{ route('writer.dashboard') }}">Dashboard
                                     Redattore</a></li>
                         @endif
 
 
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item buttondrop btndrop" type="submit">Logout</button>
-                            </form>
-                    </li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item buttondrop btndrop" type="submit">Logout</button>
+                        </form>
+                </li>
 
-                </ul>
-                
-            @endauth
-            
-        </div>
+            </ul>
+
+        @endauth
+        <form class="d-flex align-items-center pt-2 pt-lg-0" method="GET" action="{{ route('article.search') }}">
+            <input class="form-table2 p-table2  me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search"
+            name="query">
+            <button type="submit" class="btn11"><i class="bi bi-search fs-4 search-icon "></i></button>
+        </form>
     </div>
-    <form class="d-flex align-items-center" method="GET" action="{{ route('article.search') }}">
-        <input class="form-table2 p-table2  me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search" name="query">
-        <button type="submit" class="btn11"><i class="bi bi-search fs-4 search-icon "></i></button>
-    </form>
-    
-   
-</nav>
+  </div>
+  </nav>
