@@ -141,7 +141,3 @@
     box-shadow: none; 
 }
  
-.form-control::placeholder {
-    color: #ffffff; /* Cambia il colore del placeholder */
-}
-

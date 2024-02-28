@@ -26,8 +26,12 @@
 /* Bottone di ritorno alla homepage  */
 .btn-return{
     border: 2px solid rgb(20, 11, 11, 0.251) ;
-}
-.btn-return-hover:hover{
     background-color: var(--c-primary)!important;
     color: var(--c-tertiary)!important;
+}
+.btn-return-hover:hover{
+    background-color: var(--c-tertiary)!important;
+    color: var(--c-primary)!important;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+
 }

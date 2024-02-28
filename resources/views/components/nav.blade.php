@@ -2,12 +2,6 @@
     <div class="container-fluid fs-5">
         <a href="{{ route('homepage') }}"><img class="img-navbar my-0" src="/image/Minimal_initial_brand_logo_2.png"
                 id="nav_logo" alt="Logo the aulab post"></a>
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-center w-100 mb-2 mb-lg-0">
@@ -87,13 +81,9 @@
         </div>
     </div>
     <form class="d-flex align-items-center" method="GET" action="{{ route('article.search') }}">
-        <input class="form-control me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search"
-            name="query">
+        <input class="form-table2 p-table2  me-2 search-input" type="search" placeholder="Cerca..." aria-label="Search" name="query">
         <button type="submit" class="btn11"><i class="bi bi-search fs-4 search-icon "></i></button>
     </form>
-
-    {{-- <form class="d-flex" method="GET" action="{{route('article.search')}}">
-        <input class="form-control me-2 " type="search" placeholder="" aria-label="Search" name="query">
-        <button type="submit" class="btn11"><a href=""><i class="bi bi-search fs-4"></i></a></button></a>
-      </form> --}}
+    
+   
 </nav>
