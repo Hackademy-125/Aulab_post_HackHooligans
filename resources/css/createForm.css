@@ -1,5 +1,6 @@
 .form-create{
-    background-color: #e8e8e8!important;
+    background-color: #adb5bd80;
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 50px 50px 50px 50px rgba(0, 0, 0, 0.2);
     padding: 10px 100px;

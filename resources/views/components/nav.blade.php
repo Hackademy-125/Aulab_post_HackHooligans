@@ -67,6 +67,12 @@
                                         Revisore</a></li>
                             @endif
 
+                            @if (Auth::user()->is_writer)
+                            <li><a class="dropdown-item buttondrop btndrop"
+                                    href="{{ route('writer.dashboard') }}">Dashboard
+                                    Redattore</a></li>
+                        @endif
+
 
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
