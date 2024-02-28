@@ -43,10 +43,12 @@
     @endif
     </div>
 
-    <article class="container my-5" id="article_cards">
-        <div class="row justify-content-center">
+
+
+        <article class="container my-5 " id="article_cards ">
+        <div class="row justify-content-center align-items-center">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-6 col-lg-3 my-3">
+                <div class="col-12 col-md-6 col-lg-3 my-3 d-flex justify-content-center align-items-center">
                     {{-- Card fatta con componente --}}
                     <x-card 
                         :tags="$article->tags"
@@ -65,5 +67,9 @@
             @endforeach
         </div>
     </article>
+
+
+
+    
 
 </x-layout>
