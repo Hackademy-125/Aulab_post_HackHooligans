@@ -17,6 +17,7 @@
                 <div class="col-12 col-md-6 col-lg-3 my-3">
                     {{-- Card fatta con componente --}}
                     <x-card title="{{ $article->title }}" 
+                        :tags="$article->tags"
                         subtitle="{{ $article->subtitle }}"
                         image="{{ Storage::url($article->image) }}"
                         category="{{ $article->category->name ?? 'non categorizzato' }}"
