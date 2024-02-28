@@ -6,8 +6,10 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -65,21 +67,22 @@ class ArticleController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|min:3',
-            'subtitle' => 'required|min:3',
+            'title' => 'required|max:20',
+            'subtitle' => 'required|max:30',
             'body' => 'required|min:5',
             'image' => 'image',
             'category' => 'required',
-            'tags' => 'required',
+            'tags' => 'required|max:40',
         ]);
 
         $article = Article::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body' =>  $request->body,
-            "image" => $request->image ? $request->file('image')->store('public/images') : "public/images/OIP.jpg",
+            "image" => $request->file('image')->store('public/images'),
             'category_id' => $request->category,
             'user_id' => Auth::user()->id,
+            'slug'=> Str::slug($request->title),
         ]);
 
 
@@ -113,7 +116,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', compact('article'));
     }
 
     /**
@@ -121,7 +124,48 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:20|unique:articles,title,'.$article->id,
+            'subtitle' => 'required|max:30',
+            'body' => 'required|min:5',
+            'image' => 'image',
+            'category' => 'required',
+            'tags' => 'required|max:40',
+        ]);
+
+        $article->update([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' =>  $request->body,
+            'category_id' => $request->category,
+            'slug'=> Str::slug($request->title),
+        ]);
+        if ($request->image) {
+            Storage::delete($article->image);
+            $article->update([
+                "image" => $request->file('image')->store('public/images'),
+            ]);
+        }
+
+
+        $tags = explode(',', $request->tags);
+        foreach ($tags as $i => $tag) {
+            $tags[$i] = trim($tag);
+        }
+
+        $newTags= [];
+
+        foreach ($tags as $tag) {
+            $newTag = Tag::updateOrCreate(
+                ['name' => $tag],
+                ['name' => strtolower($tag)],
+            );
+            $newTags[] = $newTag->id;
+        }
+        
+        
+        $article->tags()->sync($newTag);
+        return redirect(route('writer.dashboard'))->with('message', 'hai correttamente aggiornato l\'articolo');
     }
 
     /**
@@ -129,6 +173,12 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        foreach ($article->tags as $tag) {
+            $article->tags()->detach($tag);
+        }
+
+        $article->delete();
+        return redirect(route('writer.dashboard'))->with('message', 'hai correttamente eliminato l\'articolo');
+
     }
 }

@@ -2,10 +2,9 @@
 
 
 
-    <div class="container-fluid mgn-custom">
+    <div class="container-fluid mgn-custom ">
         <div class="row justify-content-center ">
             <div class="col-12 col-md-6 form-create my-5">
-
                 @if ($errors->any())
                     <div class="alert alert-danger mt-5">
                         <ul>
@@ -15,16 +14,19 @@
                         </ul>
                     </div>
                 @endif
-                
-                <form action="{{ route('article.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('article.update', compact('article')) }}" method="post"
+                    enctype="multipart/form-data">
                     @csrf
+                    @method('put')
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Titolo" name='title'>
+                        <input type="text" class="form-control" placeholder="Titolo" name='title'
+                            value="{{ $article->title }}">
                     </div>
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Sottotitolo" name='subtitle'>
+                        <input type="text" class="form-control" placeholder="Sottotitolo" name='subtitle'
+                            value="{{ $article->subtitle }}">
                     </div>
 
                     <div class="mb-3">
@@ -35,7 +37,7 @@
 
                     <div class="mb-3">
                         <input class="form-control" id="tags" placeholder="Tags" name='tags'
-                            value="{{ old('tags') }}">
+                            value="{{ $article->tags->implode('name', ',') }}">
                         <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                     </div>
 
@@ -43,14 +45,15 @@
                         <label class="form-label">Seleziona categoria: </label>
                         <select class="form-select" name='category' aria-label="Default select example">
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}" @if ($article->category && $category->id == $article->category->id) selected @endif>
+                                    {{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <textarea class="form-control" placeholder="Descrizione dell'articolo" id="floatingTextarea2" cols="30"
-                            rows="6" name="body">{{ old('body') }}</textarea>
+                            rows="6" name="body">{{ $article->body }}</textarea>
                     </div>
 
                     <div class="custom-btn">

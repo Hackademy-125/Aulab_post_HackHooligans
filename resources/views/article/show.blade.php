@@ -24,7 +24,7 @@
                         <p>Redatto da {{ $article->user->name }} il {{ $article->created_at->format('d/m/y') }}</p>
                     </div>
                 </div>
-
+<span class="text-muted small fst-italic">Tempo di lettura {{ $article->readDuration() }} min</span>
                 <div class="text-center">
                     <div class="my-3">                 
                             <p class="small fst-italic">

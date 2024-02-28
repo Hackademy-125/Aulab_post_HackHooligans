@@ -6,6 +6,7 @@ use App\Http\Controllers\AccessController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WriterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/access', [PublicController::class, 'access'])->name('access.form');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 
 //TODO ROUTE PER IL DETTAGLIO DELL'ARTICOLO
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/show/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 
 //TODO ROUTE PER TUTTI GLI ARTICOLI DI UNA CATEGORIA SPECIFICA
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
@@ -79,7 +80,12 @@ Route::middleware('writer')->group(function () {
 
     //TODO ROUTE DI TIPO POST PER L'INVIO DEI DATI DEL FORM DELL'ARTICOLO
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+    Route::get('/writer/dashboard', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+    Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
 
 //TODO ROUTE PER LA RICERCA ARTICOLI
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+

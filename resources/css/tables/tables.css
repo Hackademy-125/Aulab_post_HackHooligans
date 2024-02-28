@@ -102,4 +102,21 @@
     color: white;
 }
 
+/* DASHBORD REDATTORE  */
+.btn-update{
+    background-color: white;
+    color: var(--c-primary);
+    padding: 5px;
+    border: 2px solid rgb(20, 11, 11, 0.251) ;
+    border-radius: 15px!important;
+    transition: 0.4s!important;
+    position: relative!important;
+    overflow: hidden!important;
+
+}
+.btn-update:hover{
+    background-color: var(--c-primary)!important;
+    color: var(--c-tertiary) !important;
+    
+}
 

@@ -1,7 +1,7 @@
 
 .nav-custom{
     color: white;
-    margin: 5vh 3vw;
+    margin: 3vh 3vw;
     border: 1px solid black ;
     border-radius: 8px;
     backdrop-filter:blur(10px) ;
@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 10;
     width: 94%;
-    height: 55px;
+    min-height: 55px;
 }
 
 .nav-primary{
@@ -21,7 +21,7 @@
     margin: 0;
     border-radius: 0px;
     border: none ;
-    height: 55px;
+    min-height: 55px;
 }
 
 .transition{
@@ -140,4 +140,6 @@
     border-color: rgb(253, 253, 253); 
     box-shadow: none; 
 }
+
+
  
