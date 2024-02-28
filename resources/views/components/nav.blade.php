@@ -21,7 +21,7 @@
                         aria-expanded="false">
                         Categorie
                     </a>
-                </li>
+                
                 <ul class="dropdown-menu ">
                     @foreach ($categories as $category)
                         <li>
@@ -30,7 +30,7 @@
                         </li>
                     @endforeach
                 </ul>
-
+            </li>
 
                 {{-- CONTROLLO PER LA RICHIESTA DEL LAVORO  --}}
                 
