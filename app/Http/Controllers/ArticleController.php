@@ -55,7 +55,8 @@ class ArticleController extends Controller
     /**
      *!Pagina di creazione articolo 
      */
-    public function create()
+
+     public function create()
     {
         return view('article.create');
     }
